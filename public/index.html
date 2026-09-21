@@ -22,10 +22,10 @@
   <!-- NAVIGATION BAR -->
   <header class="header">
     <div class="container header__inner">
-      <a href="#" class="logo">
+      <!-- <a href="#" class="logo">
         <span class="logo__title">Niko Borovyk</span>
         <span class="logo__subtitle">Koko Atelier</span>
-      </a>
+      </a> -->
 
       <!-- Desktop Nav -->
       <nav class="nav-desktop">
@@ -46,7 +46,6 @@
           </svg>
           @koko_recovery
         </a>
-        <button onclick="openModal()" class="btn btn--primary">Запись</button>
       </div>
 
       <!-- Mobile Menu Toggle Button -->
@@ -73,9 +72,6 @@
           class="mobile-menu__instagram">
           Instagram @koko_recovery
         </a>
-        <button onclick="openModal(); toggleMobileMenu();" class="btn btn--primary btn--full">
-          Записаться на консультацию
-        </button>
       </div>
     </div>
   </header>
@@ -132,14 +128,6 @@
 
     </div>
 
-    <!-- Footer Accent Ribbon -->
-    <div class="hero__footer-ribbon">
-      <div>Precision Handcrafting &bull; Bespoke Footwear &bull; Restoration</div>
-      <div class="hero__status">
-        <span class="hero__status-indicator"></span>
-        <span class="hero__status-text">Открыт к частным заказам и сотрудничеству</span>
-      </div>
-    </div>
   </section>
 
   <!-- SECTION 1: ABOUT THE MASTER (О МАСТЕРЕ) -->
@@ -424,7 +412,107 @@
     </div>
   </section>
 
-  <!-- SECTION 4: WORKS WITH MASTER (РАБОТЫ С УЧИТЕЛЕМ) -->
+  <!-- SECTION 4: SNEAKERS & BESPOKE PORTFOLIO (ПОРТФОЛИО КРОССОВОК) -->
+  <section id="sneakers" class="sneakers-section">
+    <div class="container">
+
+      <div class="sneakers-section__header">
+        <span class="eyebrow__text">СОВРЕМЕННЫЙ ДИЗАЙН</span>
+        <h2 class="sneakers-section__title">
+          Портфолио Кроссовок & Bespoke
+        </h2>
+        <p class="sneakers-section__subtitle">
+          Разработка собственных моделей премиальных кроссовок, кастомизация и кастомный пошив из премиальной
+          кожи.
+        </p>
+      </div>
+
+      <!-- Sneakers Grid (4-6 Placeholders) -->
+      <div class="sneakers-section__grid">
+
+        <!-- Sneaker 1 -->
+        <div class="sneaker-card">
+          <div class="ph-container ph-container--aspect-square">
+            <span class="placeholder-box__filename">[ sneaker_1.jpg ]</span>
+            <span class="sneaker-card__ph-text">Custom Leather Sneaker #01</span>
+          </div>
+          <div>
+            <h3 class="sneaker-card__title">Bespoke Trainer Leather & Suede</h3>
+            <p class="sneaker-card__desc">Разработка силуэта, сочетание замши премиум-класса и итальянской
+              кожи.</p>
+          </div>
+        </div>
+
+        <!-- Sneaker 2 -->
+        <div class="sneaker-card">
+          <div class="ph-container ph-container--aspect-square">
+            <span class="placeholder-box__filename">[ sneaker_2.jpg ]</span>
+            <span class="sneaker-card__ph-text">Custom Leather Sneaker #02</span>
+          </div>
+          <div>
+            <h3 class="sneaker-card__title">High-Top Luxury Sneaker</h3>
+            <p class="sneaker-card__desc">Высокий силуэт, полностью кожаный подклад и анатомическая стелька.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sneaker 3 -->
+        <div class="sneaker-card">
+          <div class="ph-container ph-container--aspect-square">
+            <span class="placeholder-box__filename">[ sneaker_3.jpg ]</span>
+            <span class="sneaker-card__ph-text">Custom Leather Sneaker #03</span>
+          </div>
+          <div>
+            <h3 class="sneaker-card__title">Minimalist Calfskin Low</h3>
+            <p class="sneaker-card__desc">Лаконичные кеды из телячьей кожи с ручным финишным патинажем.</p>
+          </div>
+        </div>
+
+        <!-- Sneaker 4 -->
+        <div class="sneaker-card">
+          <div class="ph-container ph-container--aspect-square">
+            <span class="placeholder-box__filename">[ sneaker_4.jpg ]</span>
+            <span class="sneaker-card__ph-text">Custom Leather Sneaker #04</span>
+          </div>
+          <div>
+            <h3 class="sneaker-card__title">Exotic Inset Runner</h3>
+            <p class="sneaker-card__desc">Беговые силуэты с вставками из кожи питона и премиальной резиновой
+              подошвой.</p>
+          </div>
+        </div>
+
+        <!-- Sneaker 5 -->
+        <div class="sneaker-card">
+          <div class="ph-container ph-container--aspect-square">
+            <span class="placeholder-box__filename">[ sneaker_5.jpg ]</span>
+            <span class="sneaker-card__ph-text">Custom Leather Sneaker #05</span>
+          </div>
+          <div>
+            <h3 class="sneaker-card__title">Prototyping & Sole Construction</h3>
+            <p class="sneaker-card__desc">Прототипирование новой модели Koko, сборка заготовки на колодку.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sneaker 6 -->
+        <div class="sneaker-card">
+          <div class="ph-container ph-container--aspect-square">
+            <span class="placeholder-box__filename">[ sneaker_6.jpg ]</span>
+            <span class="sneaker-card__ph-text">Custom Leather Sneaker #06</span>
+          </div>
+          <div>
+            <h3 class="sneaker-card__title">Restored & Recolored Designer Sneaker</h3>
+            <p class="sneaker-card__desc">Восстановление цвета и перекраска брендовых кроссовок
+              премиум-сегмента.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: WORKS WITH MASTER (РАБОТЫ С УЧИТЕЛЕМ) -->
   <section id="master-works" class="container master-works-section">
 
     <div class="master-works-section__header">
@@ -546,106 +634,6 @@
 
     </div>
 
-  </section>
-
-  <!-- SECTION 5: SNEAKERS & BESPOKE PORTFOLIO (ПОРТФОЛИО КРОССОВОК) -->
-  <section id="sneakers" class="sneakers-section">
-    <div class="container">
-
-      <div class="sneakers-section__header">
-        <span class="eyebrow__text">СОВРЕМЕННЫЙ ДИЗАЙН</span>
-        <h2 class="sneakers-section__title">
-          Портфолио Кроссовок & Bespoke
-        </h2>
-        <p class="sneakers-section__subtitle">
-          Разработка собственных моделей премиальных кроссовок, кастомизация и кастомный пошив из премиальной
-          кожи.
-        </p>
-      </div>
-
-      <!-- Sneakers Grid (4-6 Placeholders) -->
-      <div class="sneakers-section__grid">
-
-        <!-- Sneaker 1 -->
-        <div class="sneaker-card">
-          <div class="ph-container ph-container--aspect-square">
-            <span class="placeholder-box__filename">[ sneaker_1.jpg ]</span>
-            <span class="sneaker-card__ph-text">Custom Leather Sneaker #01</span>
-          </div>
-          <div>
-            <h3 class="sneaker-card__title">Bespoke Trainer Leather & Suede</h3>
-            <p class="sneaker-card__desc">Разработка силуэта, сочетание замши премиум-класса и итальянской
-              кожи.</p>
-          </div>
-        </div>
-
-        <!-- Sneaker 2 -->
-        <div class="sneaker-card">
-          <div class="ph-container ph-container--aspect-square">
-            <span class="placeholder-box__filename">[ sneaker_2.jpg ]</span>
-            <span class="sneaker-card__ph-text">Custom Leather Sneaker #02</span>
-          </div>
-          <div>
-            <h3 class="sneaker-card__title">High-Top Luxury Sneaker</h3>
-            <p class="sneaker-card__desc">Высокий силуэт, полностью кожаный подклад и анатомическая стелька.
-            </p>
-          </div>
-        </div>
-
-        <!-- Sneaker 3 -->
-        <div class="sneaker-card">
-          <div class="ph-container ph-container--aspect-square">
-            <span class="placeholder-box__filename">[ sneaker_3.jpg ]</span>
-            <span class="sneaker-card__ph-text">Custom Leather Sneaker #03</span>
-          </div>
-          <div>
-            <h3 class="sneaker-card__title">Minimalist Calfskin Low</h3>
-            <p class="sneaker-card__desc">Лаконичные кеды из телячьей кожи с ручным финишным патинажем.</p>
-          </div>
-        </div>
-
-        <!-- Sneaker 4 -->
-        <div class="sneaker-card">
-          <div class="ph-container ph-container--aspect-square">
-            <span class="placeholder-box__filename">[ sneaker_4.jpg ]</span>
-            <span class="sneaker-card__ph-text">Custom Leather Sneaker #04</span>
-          </div>
-          <div>
-            <h3 class="sneaker-card__title">Exotic Inset Runner</h3>
-            <p class="sneaker-card__desc">Беговые силуэты с вставками из кожи питона и премиальной резиновой
-              подошвой.</p>
-          </div>
-        </div>
-
-        <!-- Sneaker 5 -->
-        <div class="sneaker-card">
-          <div class="ph-container ph-container--aspect-square">
-            <span class="placeholder-box__filename">[ sneaker_5.jpg ]</span>
-            <span class="sneaker-card__ph-text">Custom Leather Sneaker #05</span>
-          </div>
-          <div>
-            <h3 class="sneaker-card__title">Prototyping & Sole Construction</h3>
-            <p class="sneaker-card__desc">Прототипирование новой модели Koko, сборка заготовки на колодку.
-            </p>
-          </div>
-        </div>
-
-        <!-- Sneaker 6 -->
-        <div class="sneaker-card">
-          <div class="ph-container ph-container--aspect-square">
-            <span class="placeholder-box__filename">[ sneaker_6.jpg ]</span>
-            <span class="sneaker-card__ph-text">Custom Leather Sneaker #06</span>
-          </div>
-          <div>
-            <h3 class="sneaker-card__title">Restored & Recolored Designer Sneaker</h3>
-            <p class="sneaker-card__desc">Восстановление цвета и перекраска брендовых кроссовок
-              премиум-сегмента.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
   </section>
 
   <!-- SECTION 6: REPAIR & RESTORATION (РЕМОНТ И РЕСТАВРАЦИЯ) -->

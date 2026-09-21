@@ -42,8 +42,24 @@
   --font-body: "Plus Jakarta Sans", sans-serif;
   --font-mono: monospace;
 
+  /* Font Sizes */
+  --fs-9: 9px;
+  --fs-10: 10px;
+  --fs-11: 11px;
+  --fs-xs: 0.75rem; /* 12px */
+  --fs-sm: 0.875rem; /* 14px */
+  --fs-base: 1rem; /* 16px */
+  --fs-lg: 1.125rem; /* 18px */
+  --fs-xl: 1.25rem; /* 20px */
+  --fs-2xl: 1.5rem; /* 24px */
+  --fs-3xl: 1.875rem; /* 30px */
+  --fs-4xl: 2.25rem; /* 36px */
+  --fs-5xl: 3rem; /* 48px */
+  --fs-6xl: 3.75rem; /* 60px */
+  --fs-7xl: 4.5rem; /* 72px */
+
   /* Spacing & Sizes */
-  --container-max-width: 80rem;
+  --container-max-width: 70rem;
   /* max-w-7xl */
   --header-height: 5rem;
   /* h-20 */
@@ -149,7 +165,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: var(--fs-11);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -171,14 +187,14 @@ button {
 
 .btn--hero {
   padding: 1rem 2rem;
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   box-shadow: var(--shadow-sm);
 }
 
 .btn--full {
   width: 100%;
   padding: 0.75rem;
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
 }
 
 .btn--gold {
@@ -280,7 +296,7 @@ button {
 }
 
 .eyebrow__text {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.35em;
   color: var(--color-gold);
@@ -319,7 +335,7 @@ button {
 
 .logo__title {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: var(--fs-2xl);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -332,7 +348,7 @@ button {
 }
 
 .logo__subtitle {
-  font-size: 9px;
+  font-size: var(--fs-9);
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--color-gold);
@@ -347,7 +363,7 @@ button {
 }
 
 .nav-desktop__link {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 500;
@@ -361,7 +377,7 @@ button {
 }
 
 .header__instagram {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-dark);
@@ -414,7 +430,7 @@ button {
 }
 
 .mobile-menu__link {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 500;
@@ -438,7 +454,7 @@ button {
 }
 
 .mobile-menu__instagram {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-gold);
@@ -494,7 +510,7 @@ button {
 }
 
 .hero__title {
-  font-size: 2.25rem;
+  font-size: var(--fs-4xl);
   font-weight: 300;
   color: var(--color-dark);
   line-height: 1.08;
@@ -503,7 +519,7 @@ button {
 
 .hero__subtitle {
   display: block;
-  font-size: 1.5rem;
+  font-size: var(--fs-2xl);
   font-weight: 400;
   font-family: var(--font-heading);
   color: var(--color-gold);
@@ -514,7 +530,7 @@ button {
 .hero__description {
   color: var(--color-gray-600);
   font-weight: 300;
-  font-size: 1rem;
+  font-size: var(--fs-base);
   line-height: 1.625;
   max-width: 36rem;
 }
@@ -528,7 +544,7 @@ button {
 }
 
 .hero__portfolio-link {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 600;
@@ -548,14 +564,14 @@ button {
 
 .hero__stat-value {
   display: block;
-  font-size: 1.5rem;
+  font-size: var(--fs-2xl);
   font-family: var(--font-heading);
   font-weight: 400;
   color: var(--color-gold);
 }
 
 .hero__stat-label {
-  font-size: 11px;
+  font-size: var(--fs-11);
   color: var(--color-gray-500);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -605,7 +621,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 10px;
+  font-size: var(--fs-10);
   letter-spacing: 0.1em;
   color: var(--color-gold);
   text-transform: uppercase;
@@ -631,13 +647,13 @@ button {
 
 .hero__card-title {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: var(--fs-2xl);
   letter-spacing: 0.05em;
   color: var(--color-white);
 }
 
 .hero__card-subtitle {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: rgba(197, 160, 89, 0.9);
   font-weight: 300;
   letter-spacing: 0.1em;
@@ -648,7 +664,7 @@ button {
   display: inline-block;
   padding: 0.25rem 0.75rem;
   border: 1px solid var(--color-gold-alpha-40);
-  font-size: 10px;
+  font-size: var(--fs-10);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-gray-200);
@@ -656,7 +672,7 @@ button {
 }
 
 .hero__card-footer {
-  font-size: 10px;
+  font-size: var(--fs-10);
   color: var(--color-gray-300);
   letter-spacing: 0.05em;
   font-weight: 300;
@@ -669,7 +685,7 @@ button {
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   letter-spacing: 0.1em;
   color: var(--color-gray-500);
   text-transform: uppercase;
@@ -695,11 +711,11 @@ button {
 
 @media (min-width: 640px) {
   .hero__title {
-    font-size: 3rem;
+    font-size: var(--fs-5xl);
   }
 
   .hero__subtitle {
-    font-size: 1.875rem;
+    font-size: var(--fs-3xl);
   }
 
   .hero__frame-accent {
@@ -709,15 +725,15 @@ button {
 
 @media (min-width: 768px) {
   .hero__title {
-    font-size: 3.75rem;
+    font-size: var(--fs-6xl);
   }
 
   .hero__subtitle {
-    font-size: 2.25rem;
+    font-size: var(--fs-4xl);
   }
 
   .hero__description {
-    font-size: 1.125rem;
+    font-size: var(--fs-lg);
   }
 
   .hero__footer-ribbon {
@@ -741,7 +757,7 @@ button {
   }
 
   .hero__title {
-    font-size: 4.5rem;
+    font-size: var(--fs-7xl);
   }
 }
 
@@ -768,7 +784,7 @@ button {
 }
 
 .about-section__title {
-  font-size: 1.875rem;
+  font-size: var(--fs-3xl);
   font-weight: 300;
   color: var(--color-dark);
   line-height: 1.25;
@@ -780,7 +796,7 @@ button {
   gap: 1rem;
   color: var(--color-gray-600);
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   line-height: 1.625;
 }
 
@@ -797,7 +813,7 @@ button {
 }
 
 .about-section__lang-title {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-dark);
@@ -815,7 +831,7 @@ button {
   padding: 0.375rem 0.75rem;
   background-color: var(--color-white);
   border: 1px solid var(--color-gray-200);
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-dark);
   font-weight: 500;
 }
@@ -858,14 +874,14 @@ button {
 
 .about-section__instagram-label {
   display: block;
-  font-size: 11px;
+  font-size: var(--fs-11);
   color: var(--color-gray-400);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .about-section__instagram-handle {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--color-dark);
   letter-spacing: 0.05em;
@@ -890,17 +906,17 @@ button {
 .feature-card__num {
   color: var(--color-gold);
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: var(--fs-xl);
 }
 
 .feature-card__title {
-  font-size: 1.125rem;
+  font-size: var(--fs-lg);
   font-weight: 500;
   color: var(--color-dark);
 }
 
 .feature-card__desc {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gray-500);
   line-height: 1.625;
   font-weight: 300;
@@ -914,7 +930,7 @@ button {
 .placeholder-box__filename {
   display: block;
   color: var(--color-gold);
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 600;
@@ -922,23 +938,23 @@ button {
 }
 
 .placeholder-box__caption {
-  font-size: 11px;
+  font-size: var(--fs-11);
   color: var(--color-gray-400);
 }
 
 @media (min-width: 640px) {
   .about-section__title {
-    font-size: 2.25rem;
+    font-size: var(--fs-4xl);
   }
 }
 
 @media (min-width: 768px) {
   .about-section__title {
-    font-size: 3rem;
+    font-size: var(--fs-5xl);
   }
 
   .about-section__text-group {
-    font-size: 1rem;
+    font-size: var(--fs-base);
   }
 
   .about-section__highlights-grid {
@@ -978,14 +994,14 @@ button {
 }
 
 .skills-section__title {
-  font-size: 1.875rem;
+  font-size: var(--fs-3xl);
   font-weight: 300;
   color: var(--color-dark);
 }
 
 .skills-section__subtitle {
   color: var(--color-gray-500);
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   font-weight: 300;
 }
 
@@ -1018,13 +1034,13 @@ button {
   align-items: center;
   justify-content: center;
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: var(--fs-xl);
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
 
 .skill-card__title {
-  font-size: 1.5rem;
+  font-size: var(--fs-2xl);
   font-family: var(--font-heading);
   color: var(--color-dark);
   margin-bottom: 1rem;
@@ -1036,7 +1052,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gray-600);
   font-weight: 300;
   list-style: none;
@@ -1054,7 +1070,7 @@ button {
 }
 
 .skill-card__roles-note {
-  font-size: 11px;
+  font-size: var(--fs-11);
   color: var(--color-gray-500);
   margin-bottom: 1rem;
   font-style: italic;
@@ -1064,7 +1080,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gray-700);
   font-weight: 500;
   list-style: none;
@@ -1078,13 +1094,13 @@ button {
 
 @media (min-width: 640px) {
   .skills-section__title {
-    font-size: 2.25rem;
+    font-size: var(--fs-4xl);
   }
 }
 
 @media (min-width: 768px) {
   .skills-section__title {
-    font-size: 3rem;
+    font-size: var(--fs-5xl);
   }
 
   .skills-section__grid {
@@ -1116,7 +1132,7 @@ button {
 }
 
 .management-section__title {
-  font-size: 1.875rem;
+  font-size: var(--fs-3xl);
   font-weight: 300;
   line-height: 1.25;
 }
@@ -1124,7 +1140,7 @@ button {
 .management-section__description {
   color: var(--color-gray-400);
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   line-height: 1.625;
 }
 
@@ -1150,19 +1166,19 @@ button {
 
 .mgmt-card__step {
   color: var(--color-gold);
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   letter-spacing: 0.1em;
   font-family: var(--font-mono);
 }
 
 .mgmt-card__title {
-  font-size: 1.125rem;
+  font-size: var(--fs-lg);
   font-family: var(--font-heading);
   font-weight: 400;
 }
 
 .mgmt-card__desc {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gray-400);
   font-weight: 300;
   line-height: 1.625;
@@ -1170,7 +1186,7 @@ button {
 
 @media (min-width: 640px) {
   .management-section__title {
-    font-size: 2.25rem;
+    font-size: var(--fs-4xl);
   }
 
   .management-section__grid {
@@ -1180,11 +1196,11 @@ button {
 
 @media (min-width: 768px) {
   .management-section__title {
-    font-size: 3rem;
+    font-size: var(--fs-5xl);
   }
 
   .management-section__description {
-    font-size: 1rem;
+    font-size: var(--fs-base);
   }
 }
 
@@ -1227,7 +1243,7 @@ button {
 }
 
 .master-works-section__title {
-  font-size: 1.875rem;
+  font-size: var(--fs-3xl);
   font-weight: 300;
   color: var(--color-dark);
 }
@@ -1235,12 +1251,12 @@ button {
 .master-works-section__desc {
   color: var(--color-gray-600);
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   line-height: 1.625;
 }
 
 .master-works-section__count {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-gold);
@@ -1260,7 +1276,7 @@ button {
 }
 
 .work-card__ph-title {
-  font-size: 1.125rem;
+  font-size: var(--fs-lg);
   font-family: var(--font-heading);
   color: var(--color-dark);
   padding-left: 1rem;
@@ -1269,7 +1285,7 @@ button {
 }
 
 .work-card__ph-tag {
-  font-size: 10px;
+  font-size: var(--fs-10);
   color: var(--color-gray-400);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1285,7 +1301,7 @@ button {
 }
 
 .work-card__title {
-  font-size: 1rem;
+  font-size: var(--fs-base);
   font-weight: 500;
   color: var(--color-dark);
   transition: color var(--transition-fast);
@@ -1296,19 +1312,19 @@ button {
 }
 
 .work-card__badge {
-  font-size: 11px;
+  font-size: var(--fs-11);
   color: var(--color-gray-400);
 }
 
 .work-card__desc {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gray-500);
   font-weight: 300;
 }
 
 @media (min-width: 640px) {
   .master-works-section__title {
-    font-size: 2.25rem;
+    font-size: var(--fs-4xl);
   }
 }
 
@@ -1320,7 +1336,7 @@ button {
   }
 
   .master-works-section__title {
-    font-size: 3rem;
+    font-size: var(--fs-5xl);
   }
 
   .master-works-section__grid {
@@ -1355,14 +1371,14 @@ button {
 }
 
 .sneakers-section__title {
-  font-size: 1.875rem;
+  font-size: var(--fs-3xl);
   font-weight: 300;
   color: var(--color-dark);
 }
 
 .sneakers-section__subtitle {
   color: var(--color-gray-500);
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   font-weight: 300;
 }
 
@@ -1382,19 +1398,19 @@ button {
 }
 
 .sneaker-card__ph-text {
-  font-size: 1rem;
+  font-size: var(--fs-base);
   font-family: var(--font-heading);
   color: var(--color-dark);
 }
 
 .sneaker-card__title {
-  font-size: 1rem;
+  font-size: var(--fs-base);
   font-weight: 500;
   color: var(--color-dark);
 }
 
 .sneaker-card__desc {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gray-500);
   font-weight: 300;
   margin-top: 0.25rem;
@@ -1402,7 +1418,7 @@ button {
 
 @media (min-width: 640px) {
   .sneakers-section__title {
-    font-size: 2.25rem;
+    font-size: var(--fs-4xl);
   }
 
   .sneakers-section__grid {
@@ -1412,7 +1428,7 @@ button {
 
 @media (min-width: 768px) {
   .sneakers-section__title {
-    font-size: 3rem;
+    font-size: var(--fs-5xl);
   }
 }
 
@@ -1443,7 +1459,7 @@ button {
 }
 
 .restoration-section__title {
-  font-size: 1.875rem;
+  font-size: var(--fs-3xl);
   font-weight: 300;
   color: var(--color-dark);
   line-height: 1.25;
@@ -1452,7 +1468,7 @@ button {
 .restoration-section__desc {
   color: var(--color-gray-600);
   font-weight: 300;
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   line-height: 1.625;
 }
 
@@ -1472,14 +1488,14 @@ button {
 }
 
 .restoration-service-card__title {
-  font-size: 1.125rem;
+  font-size: var(--fs-lg);
   font-family: var(--font-heading);
   font-weight: 600;
   color: var(--color-dark);
 }
 
 .restoration-service-card__desc {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gray-500);
   font-weight: 300;
 }
@@ -1505,7 +1521,7 @@ button {
 }
 
 .restoration-showcase__title {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -1513,7 +1529,7 @@ button {
 }
 
 .restoration-showcase__tag {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gold);
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -1526,7 +1542,7 @@ button {
 }
 
 .restoration-showcase__status-label {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   font-weight: 600;
   text-transform: uppercase;
   margin-top: 0.25rem;
@@ -1541,7 +1557,7 @@ button {
 }
 
 .restoration-showcase__desc {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gray-500);
   font-weight: 300;
   line-height: 1.625;
@@ -1549,7 +1565,7 @@ button {
 
 @media (min-width: 640px) {
   .restoration-section__title {
-    font-size: 2.25rem;
+    font-size: var(--fs-4xl);
   }
 
   .restoration-section__services-grid {
@@ -1559,7 +1575,7 @@ button {
 
 @media (min-width: 768px) {
   .restoration-section__title {
-    font-size: 3rem;
+    font-size: var(--fs-5xl);
   }
 
   .restoration-section__showcase-grid {
@@ -1611,7 +1627,7 @@ button {
 
 .footer__logo-title {
   font-family: var(--font-heading);
-  font-size: 1.875rem;
+  font-size: var(--fs-3xl);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1619,7 +1635,7 @@ button {
 }
 
 .footer__logo-subtitle {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--color-gold);
@@ -1629,7 +1645,7 @@ button {
 
 .footer__brand-desc {
   color: var(--color-gray-400);
-  font-size: 0.875rem;
+  font-size: var(--fs-sm);
   font-weight: 300;
   line-height: 1.625;
   max-width: 28rem;
@@ -1652,7 +1668,7 @@ button {
 }
 
 .footer__col-title {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-gold);
@@ -1661,13 +1677,13 @@ button {
 }
 
 .footer__text {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gray-300);
   font-weight: 300;
 }
 
 .footer__consult-link {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gold);
   text-decoration: underline;
   text-transform: uppercase;
@@ -1684,7 +1700,7 @@ button {
   flex-direction: column;
   gap: 0.5rem;
   list-style: none;
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gray-400);
   font-weight: 300;
 }
@@ -1703,7 +1719,7 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gray-500);
   font-weight: 300;
 }
@@ -1787,7 +1803,7 @@ button {
 }
 
 .modal__eyebrow {
-  font-size: 10px;
+  font-size: var(--fs-10);
   text-transform: uppercase;
   letter-spacing: 0.3em;
   color: var(--color-gold);
@@ -1795,13 +1811,13 @@ button {
 }
 
 .modal__title {
-  font-size: 1.5rem;
+  font-size: var(--fs-2xl);
   font-family: var(--font-heading);
   color: var(--color-dark);
 }
 
 .modal__subtitle {
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-gray-500);
   font-weight: 300;
 }
@@ -1819,7 +1835,7 @@ button {
 
 .form__label {
   display: block;
-  font-size: 11px;
+  font-size: var(--fs-11);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--color-gray-600);
@@ -1833,7 +1849,7 @@ button {
   padding: 0.625rem 1rem;
   background-color: var(--color-sand);
   border: 1px solid var(--color-gray-200);
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   color: var(--color-dark);
   transition: border-color var(--transition-fast);
 }
@@ -1851,7 +1867,7 @@ button {
   background-color: var(--color-emerald-50);
   border: 1px solid var(--color-emerald-200);
   color: var(--color-emerald-800);
-  font-size: 0.75rem;
+  font-size: var(--fs-xs);
   text-align: center;
 }
 
