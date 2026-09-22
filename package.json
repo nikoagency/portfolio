@@ -10,7 +10,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "http-server public -p 8080"
+    "dev": "http-server -p 8080"
   },
   "devDependencies": {
     "http-server": "14.1.1"
