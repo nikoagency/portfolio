@@ -1,0 +1,221 @@
+---
+import { getTranslations, type Locale } from '../i18n';
+
+const { locale } = Astro.props as { locale: Locale };
+const t = getTranslations(locale);
+const instagram =
+  'https://www.instagram.com/koko_recovery?stkn=MWVoanUxcmNqZGQwZg%3D%3D&utm_source=qr';
+---
+
+<section class="container hero">
+  <div class="hero__grid">
+    <div class="hero__media">
+      <div class="hero__frame-accent"></div>
+      <div class="hero__image-card">
+        <img src="/img/photo.avif" alt="Niko Borovyk" class="hero__image" />
+      </div>
+    </div>
+    <div class="hero__content">
+      <h1 class="hero__title">
+        Niko Borovyk <span class="hero__subtitle">{t.role}</span>
+      </h1>
+      <div class="hero__description">
+        {t.hero.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <div class="hero__cta-group">
+        <a href="#master-works" class="btn btn--primary btn--hero">{t.portfolio}</a>
+        <div class="about-section__instagram-container">
+          <a href={instagram} target="_blank" rel="noopener noreferrer" class="about-section__instagram-card">
+            <div>
+              <span class="about-section__instagram-label">{t.workshop}</span>
+              <span class="about-section__instagram-handle">@koko_recovery</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero__title {
+    font-size: var(--fs-4xl);
+    font-weight: 300;
+    color: var(--color-dark);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+
+  .hero__subtitle {
+    display: block;
+    font-size: var(--fs-2xl);
+    font-weight: 400;
+    font-family: var(--font-heading);
+    color: var(--color-gold);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  .hero__description {
+    color: var(--color-gray-600);
+    font-weight: 300;
+    font-size: var(--fs-base);
+    line-height: 1.625;
+    max-width: 36rem;
+  }
+
+  .hero__description p {
+    margin-bottom: 1rem;
+  }
+
+  .hero__cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .hero__media {
+    position: relative;
+  }
+
+  .hero__frame-accent {
+    display: none;
+    position: absolute;
+    top: -1.25rem;
+    left: -1.25rem;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--color-gold-alpha-40);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hero__image-card {
+    z-index: 10;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .hero__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .about-section__instagram-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 10px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gold-alpha-30);
+    transition: border-color var(--transition-fast);
+  }
+
+  .about-section__instagram-card:hover {
+    border-color: var(--color-gold);
+  }
+
+  .about-section__instagram-label {
+    display: block;
+    font-size: var(--fs-11);
+    color: var(--color-gray-400);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .about-section__instagram-handle {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--color-dark);
+    letter-spacing: 0.05em;
+  }
+
+  @media (min-width: 640px) {
+    .hero__title {
+      font-size: var(--fs-5xl);
+    }
+
+    .hero__subtitle {
+      font-size: var(--fs-3xl);
+    }
+
+    .hero__frame-accent {
+      display: block;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hero__title {
+      font-size: var(--fs-6xl);
+    }
+
+    .hero__subtitle {
+      font-size: var(--fs-4xl);
+    }
+
+    .hero__description {
+      font-size: var(--fs-lg);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero__grid {
+      grid-template-columns: repeat(12, 1fr);
+      gap: 2rem;
+    }
+
+    .hero__content {
+      grid-column: 6 / -1;
+    }
+
+    .hero__media {
+      grid-column: 1 / 6;
+    }
+
+    .hero__title {
+      font-size: var(--fs-7xl);
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .hero__media {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero__image {
+      max-height: 600px;
+      object-fit: cover;
+    }
+  }
+</style>

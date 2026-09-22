@@ -1,0 +1,103 @@
+{
+  "title": "Niko Borovyk — Shoemaker & Leather Restorer",
+  "role": "Bespoke Shoemaker & Restorer",
+  "nav": ["Skills", "Workshop", "Works", "Repair & Restoration"],
+  "hero": [
+    "My name is Niko Borovyk. For 8 years, I have worked professionally in traditional shoemaking and premium leather care.",
+    "My path began with comprehensive training from an experienced master in the full cycle of handmade shoe production. Later, I gained extensive practical experience in leading restoration ateliers in Ukraine, solving complex technical challenges.",
+    "Today I develop my own workshop, Koko Recovery, while creating original footwear designs and taking on demanding commissions.",
+    "I speak Ukrainian, Russian, English, and Hungarian."
+  ],
+  "portfolio": "View portfolio →",
+  "workshop": "My workshop",
+  "skills": "Professional Skills",
+  "skillGroups": [
+    [
+      "Shoe production",
+      [
+        "Custom last making",
+        "Pattern making and modelling",
+        "Leather cutting from patterns",
+        "Upper assembly",
+        "Lasting uppers on a last",
+        "Moulding leather insoles on the last",
+        "Working with leather and rubber soles",
+        "Heel making",
+        "Sole cementing",
+        "Installing heel taps and protective soles",
+        "Stitching"
+      ]
+    ],
+    [
+      "Colour and finishing",
+      [
+        "Leather dyeing with penetrating alcohol- and water-based dyes",
+        "Working with Saphir professional shoe care and comparable products",
+        "Colour matching and colour work",
+        "Patina with colour transitions",
+        "Polishing",
+        "Mirror shine"
+      ]
+    ],
+    [
+      "I can also work as",
+      [
+        "Full-cycle shoemaker",
+        "Shoe-upper maker",
+        "Lasting specialist",
+        "Shoe assembly specialist",
+        "Colour and finishing specialist",
+        "Shoe repair and restoration specialist",
+        "Custom shoe production specialist"
+      ]
+    ]
+  ],
+  "management": "Workshop Management",
+  "managementLead": "Experience managing my own shoe workshop and organising the complete working process.",
+  "managementCards": [
+    [
+      "Supply",
+      "Selecting exotic and classic leather, soles, hardware, and European shoe-care products. Direct work with trusted suppliers."
+    ],
+    [
+      "Processes",
+      "Allocating work between specialist craftspeople, supervising technical standards and delivery deadlines."
+    ],
+    [
+      "Economics",
+      "Calculating material costs and manual-work hours, with transparent pricing for premium clients."
+    ],
+    [
+      "Service",
+      "Personal consultations, measurements, fittings, and order management from intake to handover."
+    ]
+  ],
+  "ownWorks": "My Work",
+  "ownWorksLead": "Every stage completed independently.",
+  "school": "HIGH CRAFT",
+  "masterWorks": "Work with My Master",
+  "masterLead": "Part of my professional experience comes from working alongside a master with more than 30 years of handmade shoemaking experience. During this work, we completed high-responsibility commissions, including footwear for the Presidential family and the Vatican.",
+  "restoration": "Repair & Restoration",
+  "restorationLead": "Extensive hands-on experience repairing and restoring shoes, bags, and leather accessories, including premium items.",
+  "restorationServices": [
+    "Shoe repair and complex restoration",
+    "Restoring an item's shape and construction",
+    "Sole replacement and restoration",
+    "Installing protective soles and heel taps",
+    "Making and replacing individual components",
+    "Recovering and restoring shoe elements",
+    "Repairing and restoring leather bags and accessories",
+    "Dyeing, colour restoration, and colour matching",
+    "Leather cleaning, care, and finishing",
+    "Careful work with valuable and technically demanding items"
+  ],
+  "bags": "Bags",
+  "shoes": "Shoes",
+  "footerInstagram": "Visit Koko on Instagram",
+  "contacts": "Contact",
+  "navigation": "Navigation",
+  "menu": "Open menu",
+  "previous": "Previous image",
+  "next": "Next image",
+  "close": "Close preview"
+}

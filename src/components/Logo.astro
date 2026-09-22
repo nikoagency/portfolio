@@ -1,0 +1,44 @@
+---
+import { localePath, getTranslations, type Locale } from '../i18n';
+
+const { locale } = Astro.props as { locale: Locale };
+const t = getTranslations(locale);
+---
+
+<a href={localePath(locale)} class="logo">
+  <span class="logo__title">Niko Borovyk</span>
+  <span class="logo__subtitle">{t.role}</span>
+</a>
+
+<style>
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
+  }
+
+  .logo__title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-2xl);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    transition: color var(--transition-fast);
+    white-space: nowrap;
+  }
+
+  .logo:hover .logo__title {
+    color: var(--color-gold);
+  }
+
+  .logo__subtitle {
+    text-align: center;
+    font-size: var(--fs-9);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    font-weight: 500;
+  }
+</style>

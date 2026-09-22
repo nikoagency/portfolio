@@ -1,0 +1,103 @@
+{
+  "title": "Niko Borovyk — Cipőkészítő és bőrrestaurátor",
+  "role": "Egyedi cipőkészítő és restaurátor",
+  "nav": ["Szakértelem", "Műhely", "Munkák", "Javítás és restaurálás"],
+  "hero": [
+    "Niko Borovyk vagyok. Nyolc éve foglalkozom hivatásszerűen hagyományos cipőkészítéssel és prémium bőráruk ápolásával.",
+    "Utam egy tapasztalt mesternél, a kézzel készített cipők teljes gyártási folyamatának alapos elsajátításával indult. Később vezető ukrajnai restaurátorműhelyekben szereztem jelentős gyakorlati tapasztalatot, összetett technológiai feladatokat megoldva.",
+    "Ma a saját, Koko Recovery nevű műhelyemet fejlesztem, miközben egyedi cipőmodelleket tervezek és igényes megrendeléseket teljesítek.",
+    "Ukránul, oroszul, angolul és magyarul beszélek."
+  ],
+  "portfolio": "Portfólió megtekintése →",
+  "workshop": "Műhelyem",
+  "skills": "Szakmai készségek",
+  "skillGroups": [
+    [
+      "Cipőkészítés",
+      [
+        "Egyedi kaptafák készítése",
+        "Modellezés",
+        "Bőr szabása szabásminták alapján",
+        "Felsőrészek összeállítása",
+        "Felsőrész kaptafára húzása",
+        "Bőrtalpbetétek formázása kaptafán",
+        "Bőr- és gumitalpak használata",
+        "Sarokkészítés",
+        "Talp ragasztása",
+        "Sarokvédők és védőtalpak felszerelése",
+        "Varrás"
+      ]
+    ],
+    [
+      "Színezés és finiselés",
+      [
+        "Bőr festése alkoholos és vizes alapú beszívódó festékekkel",
+        "Saphir professzionális cipőápolási termékek és hasonló anyagok használata",
+        "Színezés és színazonosítás",
+        "Patinázás színátmenetekkel",
+        "Polírozás",
+        "Tükörfényes polírozás"
+      ]
+    ],
+    [
+      "Dolgozhatok még mint",
+      [
+        "Teljes folyamatú cipőkészítő",
+        "Cipőfelsőrész-készítő",
+        "Kaptafára húzó szakember",
+        "Cipőösszeállító szakember",
+        "Színező és finiselő szakember",
+        "Cipőjavító és restaurátor",
+        "Egyedi cipőgyártási szakember"
+      ]
+    ]
+  ],
+  "management": "Műhelyvezetés",
+  "managementLead": "Tapasztalat saját cipőműhely vezetésében és a teljes munkafolyamat megszervezésében.",
+  "managementCards": [
+    [
+      "Beszerzés",
+      "Egzotikus és klasszikus bőrök, talpak, kellékek és európai cipőápoló anyagok kiválasztása. Közvetlen munka megbízható beszállítókkal."
+    ],
+    [
+      "Folyamatok",
+      "A munka elosztása szakterületi mesterek között, a technológiai előírások és a határidők felügyelete."
+    ],
+    [
+      "Gazdaságosság",
+      "Anyagköltségek és kézi munkaórák számítása, átlátható árazás prémium ügyfelek számára."
+    ],
+    [
+      "Szolgáltatás",
+      "Személyes konzultációk, méretvétel, próbák és a megrendelések kezelése az átvételtől az átadásig."
+    ]
+  ],
+  "ownWorks": "Saját munkáim",
+  "ownWorksLead": "Minden munkafázist önállóan végzek.",
+  "school": "MAGAS SZINTŰ MESTERSÉGBELI TUDÁS",
+  "masterWorks": "Munkák a mesteremmel",
+  "masterLead": "Szakmai tapasztalatom egy részét egy több mint 30 éves kézi cipőkészítői tapasztalattal rendelkező mester mellett szereztem. Az együttműködés során kiemelt felelősségű megrendeléseket is teljesítettünk, többek között az elnöki család és a Vatikán számára.",
+  "restoration": "Javítás és restaurálás",
+  "restorationLead": "Széles körű gyakorlati tapasztalat cipők, táskák és bőrkiegészítők javításában és restaurálásában, prémium termékek esetében is.",
+  "restorationServices": [
+    "Cipőjavítás és összetett restaurálás",
+    "A termék formájának és szerkezetének helyreállítása",
+    "Talpak cseréje és helyreállítása",
+    "Védőtalpak és sarokvédők felszerelése",
+    "Egyedi alkatrészek készítése és cseréje",
+    "Cipőelemek borításának és állapotának helyreállítása",
+    "Bőrtáskák és kiegészítők javítása és restaurálása",
+    "Festés, színhelyreállítás és színazonosítás",
+    "Bőr tisztítása, ápolása és finiselése",
+    "Értékes és technikailag összetett termékek gondos helyreállítása"
+  ],
+  "bags": "Táskák",
+  "shoes": "Cipők",
+  "footerInstagram": "Koko az Instagramon",
+  "contacts": "Kapcsolat",
+  "navigation": "Navigáció",
+  "menu": "Menü megnyitása",
+  "previous": "Előző kép",
+  "next": "Következő kép",
+  "close": "Előnézet bezárása"
+}

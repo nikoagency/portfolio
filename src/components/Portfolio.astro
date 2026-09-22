@@ -1,0 +1,400 @@
+---
+import { locales, type Locale, getTranslations } from '../i18n';
+import Hero from './Hero.astro';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import Logo from './Logo.astro';
+
+const { locale } = Astro.props as { locale: Locale };
+const t = getTranslations(locale);
+const instagram =
+  'https://www.instagram.com/koko_recovery?stkn=MWVoanUxcmNqZGQwZg%3D%3D&utm_source=qr';
+const ownWorks = Array.from(
+  { length: 5 },
+  (_, index) => `/img/my-works/photo_${index + 1}_2026-09-22_07-57-33.avif`
+);
+const masterWorks = Array.from(
+  { length: 16 },
+  (_, index) => `/img/master-works/photo_${index + 1}_2026-09-22_08-31-27.avif`
+);
+const groups = [
+  ['bags', 1, 5],
+  ['bags', 2, 5],
+  ['bags', 3, 7],
+  ['bags', 4, 4],
+  ['shoes', 1, 5],
+  ['shoes', 2, 4],
+  ['shoes', 3, 4],
+  ['shoes', 4, 2],
+] as const;
+const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
+---
+
+<!doctype html>
+<html lang={locale} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={t.role} />
+    <title>{t.title}</title>
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <Logo locale={locale} />
+        <nav class="nav-desktop" aria-label={t.navigation}>
+          {
+            navLinks.map((id, index) => (
+              <a href={`#${id}`} class="nav-desktop__link gold-hover-link">
+                {t.nav[index]}
+              </a>
+            ))
+          }
+        </nav>
+        <!-- <div class="header__actions">
+          <a
+            href={instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="header__instagram">@koko_recovery</a>
+        </div> -->
+        <LanguageSwitcher locale={locale} />
+        <button
+          class="header__mobile-toggle"
+          aria-label={t.menu}
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg
+            class="header__mobile-icon"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M4 6h16M4 12h16M4 18h16"></path></svg
+          >
+        </button>
+      </div>
+      <div class="mobile-menu hidden" data-mobile-menu>
+        <div class="mobile-menu__nav">
+          {
+            navLinks.map((id, index) => (
+              <a href={`#${id}`} class="mobile-menu__link">
+                {t.nav[index]}
+              </a>
+            ))
+          }
+        </div>
+        <div class="mobile-menu__footer">
+          <a
+            href={instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mobile-menu__instagram">Instagram @koko_recovery</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <Hero locale={locale} />
+
+      <section id="skills" class="skills-section">
+        <div class="container">
+          <div class="skills-section__header">
+            <h2 class="skills-section__title">{t.skills}</h2>
+          </div>
+          <div class="skills-section__grid">
+            {
+              t.skillGroups.map(([heading, items], index) => (
+                <article class="skill-card">
+                  <>
+                    <h3 class="skill-card__title">
+                      <span class="skill-card__badge">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      {heading}
+                    </h3>
+                    <ul class="skill-card__list">
+                      {items.map((item) => (
+                        <li class="skill-card__item">
+                          <span class="skill-card__bullet">•</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <section id="management" class="management-section">
+        <div class="container">
+          <div class="management-section__header">
+            <div class="management-section__title-group">
+              <h2 class="management-section__title">{t.management}</h2>
+            </div><div class="management-section__description-container">
+              <p class="management-section__description">{t.managementLead}</p>
+            </div>
+          </div>
+          <div class="management-section__grid">
+            {
+              t.managementCards.map(([heading, description], index) => (
+                <article class="mgmt-card">
+                  <>
+                    <div class="mgmt-card__step">
+                      {String(index + 1).padStart(2, '0')} / {heading}
+                    </div>
+                    <p class="mgmt-card__desc">{description}</p>
+                  </>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <section id="sneakers" class="sneakers-section">
+        <div class="container">
+          <div class="sneakers-section__header">
+            <h2 class="sneakers-section__title">{t.ownWorks}</h2><p
+              class="sneakers-section__subtitle"
+            >
+              {t.ownWorksLead}
+            </p>
+          </div><div class="sneakers-section__grid">
+            {
+              ownWorks.map((image, index) => (
+                <button
+                  class="sneaker-card"
+                  data-lightbox-image={image}
+                  aria-label={`${t.ownWorks} ${index + 1}`}
+                >
+                  <img
+                    src={image}
+                    alt={`${t.ownWorks} ${index + 1}`}
+                    class="sneaker-card__img"
+                    loading="lazy"
+                  />
+                </button>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <section id="master-works" class="container master-works-section">
+        <div class="master-works-section__header">
+          <div class="master-works-section__info">
+            <span class="eyebrow__text">{t.school}</span><h2
+              class="master-works-section__title"
+            >
+              {t.masterWorks}
+            </h2><p class="master-works-section__desc">{t.masterLead}</p>
+          </div>
+        </div><div class="master-works-section__grid">
+          {
+            masterWorks.map((image, index) => (
+              <button
+                class="work-card"
+                data-lightbox-image={image}
+                aria-label={`${t.masterWorks} ${index + 1}`}
+              >
+                <img
+                  src={image}
+                  alt={`${t.masterWorks} ${index + 1}`}
+                  class="work-card__img"
+                  loading="lazy"
+                />
+              </button>
+            ))
+          }
+        </div>
+      </section>
+
+      <section id="restoration" class="restoration-section">
+        <div class="container">
+          <div class="restoration-section__header">
+            <div class="restoration-section__info">
+              <h2 class="restoration-section__title">{t.restoration}</h2><p
+                class="restoration-section__desc"
+              >
+                {t.restorationLead}
+              </p>
+            </div>
+          </div><ul class="restoration__services-list">
+            {
+              t.restorationServices.map((service) => (
+                <li class="restoration__service-item">
+                  <>
+                    <span class="restoration__service-icon">✦</span>
+                    <span>{service}</span>
+                  </>
+                </li>
+              ))
+            }
+          </ul>
+          {
+            ['bags', 'shoes'].map((kind) => (
+              <Fragment>
+                <>
+                  <h3 class="restoration__group-title">
+                    {kind === 'bags' ? t.bags : t.shoes}
+                  </h3>
+                  <div class="restoration__showcase-grid">
+                    {groups
+                      .filter(([group]) => group === kind)
+                      .map(([, set, total]) => (
+                        <div class="gallery">
+                          <div class="gallery__slider">
+                            <button
+                              class="gallery__btn gallery__btn--prev"
+                              aria-label={t.previous}
+                            >
+                              ‹
+                            </button>
+                            <div class="gallery__track">
+                              {Array.from({ length: total }, (_, index) => (
+                                <button
+                                  class="gallery__slide"
+                                  data-lightbox-image={`/img/restoration/${kind}/${set}/${index + 1}.avif`}
+                                  aria-label={`${kind} ${set}, ${index + 1}`}
+                                >
+                                  <img
+                                    src={`/img/restoration/${kind}/${set}/${index + 1}.avif`}
+                                    alt={kind === 'bags' ? t.bags : t.shoes}
+                                    loading="lazy"
+                                  />
+                                </button>
+                              ))}
+                            </div>
+                            <button
+                              class="gallery__btn gallery__btn--next"
+                              aria-label={t.next}
+                            >
+                              ›
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </>
+              </Fragment>
+            ))
+          }
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <div class="footer__logo">
+              <span class="footer__logo-title">Niko Borovyk</span><span
+                class="footer__logo-subtitle">Koko Leather Recovery</span>
+            </div><div class="footer__cta">
+              <a
+                href={instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--gold">{t.footerInstagram}</a>
+            </div>
+          </div><div class="footer__links-grid">
+            <div class="footer__column">
+              <span class="footer__col-title">{t.contacts}</span>
+            </div><div class="footer__column">
+              <span class="footer__col-title">{t.navigation}</span><ul
+                class="footer__nav-list"
+              >
+                {
+                  navLinks.map((id, index) => (
+                    <li>
+                      <a href={`#${id}`} class="footer__nav-link">
+                        {t.nav[index]}
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
+        </div><div class="footer__bottom"><div>© 2026 Niko Borovyk</div></div>
+      </div>
+    </footer>
+    <div class="lightbox" data-lightbox aria-hidden="true">
+      <button class="lightbox__close" data-lightbox-close aria-label={t.close}
+        >×</button
+      ><img class="lightbox__img" data-lightbox-image-element alt="" />
+    </div>
+    <script is:inline>
+      const menuButton = document.querySelector('[data-menu-button]');
+      const mobileMenu = document.querySelector('[data-mobile-menu]');
+      menuButton?.addEventListener('click', () => {
+        const open = mobileMenu.classList.toggle('hidden') === false;
+        menuButton.setAttribute('aria-expanded', String(open));
+      });
+      mobileMenu
+        ?.querySelectorAll('a')
+        .forEach((link) =>
+          link.addEventListener('click', () =>
+            mobileMenu.classList.add('hidden')
+          )
+        );
+      document.querySelectorAll('.gallery').forEach((gallery) => {
+        const track = gallery.querySelector('.gallery__track');
+        gallery
+          .querySelector('.gallery__btn--prev')
+          ?.addEventListener('click', () =>
+            track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' })
+          );
+        gallery
+          .querySelector('.gallery__btn--next')
+          ?.addEventListener('click', () =>
+            track.scrollBy({ left: track.clientWidth, behavior: 'smooth' })
+          );
+      });
+      const lightbox = document.querySelector('[data-lightbox]');
+      const lightboxImage = document.querySelector(
+        '[data-lightbox-image-element]'
+      );
+      document.querySelectorAll('[data-lightbox-image]').forEach((trigger) =>
+        trigger.addEventListener('click', () => {
+          lightboxImage.src = trigger.dataset.lightboxImage;
+          lightboxImage.alt = trigger.querySelector('img')?.alt || '';
+          lightbox.classList.add('lightbox--open');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        })
+      );
+      const closeLightbox = () => {
+        lightbox.classList.remove('lightbox--open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+      document
+        .querySelector('[data-lightbox-close]')
+        ?.addEventListener('click', closeLightbox);
+      lightbox?.addEventListener('click', (event) => {
+        if (event.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeLightbox();
+      });
+    </script>
+  </body>
+</html>

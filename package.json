@@ -5,14 +5,12 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
-    "dev": "http-server -p 8080"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "devDependencies": {
-    "http-server": "14.1.1"
+    "astro": "7.3.3"
   }
 }

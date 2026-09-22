@@ -1,0 +1,150 @@
+---
+import { localePath, locales, localeNames, type Locale } from '../i18n';
+
+const { locale } = Astro.props as { locale: Locale };
+const current = locale.toUpperCase();
+---
+
+<div class="language-switcher" data-switcher>
+  <button class="language-switcher__trigger" data-switcher-trigger aria-haspopup="true" aria-expanded="false">
+    <span>{current}</span>
+    <svg class="language-switcher__arrow" width="10" height="6" viewBox="0 0 10 6" fill="none">
+      <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <div class="language-switcher__dropdown" data-switcher-dropdown hidden>
+    {
+      locales.map((code) => {
+        const isActive = code === locale;
+        return (
+          <a
+            href={localePath(code)}
+            class:list={[
+              'language-switcher__option',
+              { 'language-switcher__option--active': isActive },
+            ]}
+            lang={code}
+          >
+            <span class="language-switcher__option-code">{code.toUpperCase()}</span>
+            <span class="language-switcher__option-name">{localeNames[code]}</span>
+          </a>
+        );
+      })
+    }
+  </div>
+</div>
+
+<script>
+  const root = document.querySelector('[data-switcher]');
+  const trigger = root?.querySelector('[data-switcher-trigger]');
+  const dropdown = root?.querySelector('[data-switcher-dropdown]');
+
+  trigger?.addEventListener('click', () => {
+    const open = dropdown.hidden;
+    dropdown.hidden = !open;
+    trigger.setAttribute('aria-expanded', String(open));
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!root?.contains(e.target as Node)) {
+      dropdown.hidden = true;
+      trigger?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      dropdown.hidden = true;
+      trigger?.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>
+
+<style>
+  .language-switcher {
+    position: relative;
+    margin-left: 1rem;
+  }
+
+  .language-switcher__trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.6rem;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-500);
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  .language-switcher__trigger:hover {
+    color: var(--color-gold);
+    border-color: var(--color-gold-alpha-30);
+  }
+
+  .language-switcher__arrow {
+    transition: transform var(--transition-fast);
+  }
+
+  .language-switcher__trigger[aria-expanded="true"] .language-switcher__arrow {
+    transform: rotate(180deg);
+  }
+
+  .language-switcher__dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 9rem;
+    margin-top: 0.25rem;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    box-shadow: var(--shadow-xl);
+    z-index: 60;
+  }
+
+  .language-switcher__option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    transition: background var(--transition-fast);
+  }
+
+  .language-switcher__option:hover {
+    background: var(--color-gold-alpha-10);
+  }
+
+  .language-switcher__option--active {
+    background: var(--color-gold-subtle);
+  }
+
+  .language-switcher__option-code {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--color-dark);
+    min-width: 1.5rem;
+  }
+
+  .language-switcher__option-name {
+    font-size: var(--fs-xs);
+    font-weight: 400;
+    color: var(--color-gray-500);
+  }
+
+  .language-switcher__option--active .language-switcher__option-code {
+    color: var(--color-gold);
+  }
+
+  @media (max-width: 767px) {
+    .language-switcher {
+      margin-left: auto;
+      margin-right: 0.75rem;
+    }
+  }
+</style>
