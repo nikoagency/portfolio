@@ -55,22 +55,25 @@
   "management": "Workshop Management",
   "managementLead": "Experience managing my own shoe workshop and organising the complete working process.",
   "managementCards": [
-    [
-      "Supply",
-      "Selecting exotic and classic leather, soles, hardware, and European shoe-care products. Direct work with trusted suppliers."
-    ],
-    [
-      "Processes",
-      "Allocating work between specialist craftspeople, supervising technical standards and delivery deadlines."
-    ],
-    [
-      "Economics",
-      "Calculating material costs and manual-work hours, with transparent pricing for premium clients."
-    ],
-    [
-      "Service",
-      "Personal consultations, measurements, fittings, and order management from intake to handover."
-    ]
+    ["Supply", [
+      "Purchasing materials and consumables",
+      "Selecting leather, soles, hardware, and professional chemicals",
+      "Working with suppliers"
+    ]],
+    ["Processes", [
+      "Planning and order allocation",
+      "Distributing work among craftsmen",
+      "Quality and deadline control",
+      "Organising workflow and workshop workload"
+    ]],
+    ["Economics", [
+      "Cost calculation and pricing"
+    ]],
+    ["Service", [
+      "Client communication and order intake",
+      "Order follow-through from intake to delivery",
+      "Workspace and production process organisation"
+    ]]
   ],
   "ownWorks": "My Work",
   "ownWorksLead": "Every stage completed independently.",

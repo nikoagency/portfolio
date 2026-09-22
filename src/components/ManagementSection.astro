@@ -16,14 +16,16 @@ const t = getTranslations(locale);
     </div>
     <div class="management-section__grid">
       {
-        t.managementCards.map(([heading, description], index) => (
+        t.managementCards.map(([heading, items], index) => (
           <article class="mgmt-card">
-            <>
-              <div class="mgmt-card__step">
-                {String(index + 1).padStart(2, '0')} / {heading}
-              </div>
-              <p class="mgmt-card__desc">{description}</p>
-            </>
+            <div class="mgmt-card__step">
+              {String(index + 1).padStart(2, '0')} / {heading}
+            </div>
+            <ul class="mgmt-card__list">
+              {items.map((item) => (
+                <li class="mgmt-card__item">{item}</li>
+              ))}
+            </ul>
           </article>
         ))
       }
@@ -97,7 +99,15 @@ const t = getTranslations(locale);
     font-weight: 400;
   }
 
-  .mgmt-card__desc {
+  .mgmt-card__list {
+    margin: 0;
+    padding: 0 0 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .mgmt-card__item {
     color: var(--color-gray-300);
     font-weight: 300;
     line-height: 1.625;

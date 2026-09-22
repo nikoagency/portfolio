@@ -55,22 +55,25 @@
   "management": "Műhelyvezetés",
   "managementLead": "Tapasztalat saját cipőműhely vezetésében és a teljes munkafolyamat megszervezésében.",
   "managementCards": [
-    [
-      "Beszerzés",
-      "Egzotikus és klasszikus bőrök, talpak, kellékek és európai cipőápoló anyagok kiválasztása. Közvetlen munka megbízható beszállítókkal."
-    ],
-    [
-      "Folyamatok",
-      "A munka elosztása szakterületi mesterek között, a technológiai előírások és a határidők felügyelete."
-    ],
-    [
-      "Gazdaságosság",
-      "Anyagköltségek és kézi munkaórák számítása, átlátható árazás prémium ügyfelek számára."
-    ],
-    [
-      "Szolgáltatás",
-      "Személyes konzultációk, méretvétel, próbák és a megrendelések kezelése az átvételtől az átadásig."
-    ]
+    ["Beszerzés", [
+      "Anyagok és fogyóeszközök beszerzése",
+      "Bőrök, talpak, vasalások és professzionális vegyszerek kiválasztása",
+      "Kapcsolattartás beszállítókkal"
+    ]],
+    ["Folyamatok", [
+      "Megrendelések tervezése és elosztása",
+      "Munka elosztása a mesterek között",
+      "Minőség- és határidő-ellenőrzés",
+      "Munkafolyamat és műhelyterhelés szervezése"
+    ]],
+    ["Gazdaságosság", [
+      "Költségszámítás és árképzés"
+    ]],
+    ["Szolgáltatás", [
+      "Ügyfélkapcsolatok és megrendelések fogadása",
+      "Megrendelések nyomon követése átvételtől átadásig",
+      "Munkaterület és gyártási folyamat szervezése"
+    ]]
   ],
   "ownWorks": "Saját munkáim",
   "ownWorksLead": "Minden munkafázist önállóan végzek.",
