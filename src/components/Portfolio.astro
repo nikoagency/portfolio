@@ -124,8 +124,10 @@ const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
       <MasterWorksSection locale={locale} masterWorks={masterWorks} />
       <RestorationSection locale={locale} groups={groups} />
     </main>
+
     <Footer locale={locale} />
     <Lightbox locale={locale} />
+
     <script is:inline>
       const menuButton = document.querySelector('[data-menu-button]');
       const mobileMenu = document.querySelector('[data-mobile-menu]');
@@ -142,16 +144,36 @@ const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
         );
       document.querySelectorAll('.gallery').forEach((gallery) => {
         const track = gallery.querySelector('.gallery__track');
+        const dots = gallery.querySelectorAll('.gallery__dot');
+        function updateDots() {
+          const slideWidth = track.clientWidth;
+          const scrollLeft = track.scrollLeft;
+          const activeIndex = Math.round(scrollLeft / slideWidth);
+          dots.forEach((dot, i) => {
+            dot.classList.toggle('gallery__dot--active', i === activeIndex);
+          });
+        }
         gallery
           .querySelector('.gallery__btn--prev')
-          ?.addEventListener('click', () =>
-            track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' })
-          );
+          ?.addEventListener('click', () => {
+            track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
+          });
         gallery
           .querySelector('.gallery__btn--next')
-          ?.addEventListener('click', () =>
-            track.scrollBy({ left: track.clientWidth, behavior: 'smooth' })
-          );
+          ?.addEventListener('click', () => {
+            track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
+          });
+        dots.forEach((dot) => {
+          dot.addEventListener('click', () => {
+            const index = parseInt(dot.dataset.dot);
+            track.scrollTo({
+              left: index * track.clientWidth,
+              behavior: 'smooth',
+            });
+          });
+        });
+        track.addEventListener('scroll', updateDots);
+        updateDots();
       });
     </script>
   </body>

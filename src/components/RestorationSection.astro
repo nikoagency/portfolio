@@ -72,6 +72,11 @@ const t = getTranslations(locale);
                         ›
                       </button>
                     </div>
+                    <div class="gallery__dots">
+                      {Array.from({ length: total }, (_, i) => (
+                        <button class={`gallery__dot${i === 0 ? ' gallery__dot--active' : ''}`} data-dot={i} aria-label={`Go to slide ${i + 1}`}></button>
+                      ))}
+                    </div>
                   </div>
                 ))}
             </div>
