@@ -1968,3 +1968,72 @@ button {
     padding: 2.5rem;
   }
 }
+
+/* BEM Block: Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-slow), visibility var(--transition-slow);
+}
+
+.lightbox--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: var(--shadow-2xl);
+  border: 1px solid var(--color-gold-alpha-30);
+  transform: scale(0.92);
+  transition: transform var(--transition-cubic);
+}
+
+.lightbox--open .lightbox__img {
+  transform: scale(1);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 10;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border-radius: 50%;
+}
+
+.lightbox__close:hover {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-dark);
+}
+
+.lightbox__close-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+img:not([class*="icon"]):not([class*="logo"]) {
+  cursor: pointer;
+}
