@@ -22,18 +22,17 @@
   <!-- NAVIGATION BAR -->
   <header class="header">
     <div class="container header__inner">
-      <!-- <a href="#" class="logo">
+      <a href="#" class="logo">
         <span class="logo__title">Niko Borovyk</span>
         <span class="logo__subtitle">Koko Atelier</span>
-      </a> -->
+      </a>
 
       <!-- Desktop Nav -->
       <nav class="nav-desktop">
-        <a href="#skills" class="nav-desktop__link gold-hover-link">Навыки</a>
-        <a href="#management" class="nav-desktop__link gold-hover-link">Управление</a>
-        <a href="#master-works" class="nav-desktop__link gold-hover-link">С Учителем</a>
-        <a href="#sneakers" class="nav-desktop__link gold-hover-link">Кроссовки</a>
-        <a href="#restoration" class="nav-desktop__link gold-hover-link">Реставрация</a>
+        <a href="#skills" class="nav-desktop__link gold-hover-link">Мои Навыки</a>
+        <a href="#management" class="nav-desktop__link gold-hover-link">Мастерская</a>
+        <a href="#sneakers" class="nav-desktop__link gold-hover-link">Работы</a>
+        <a href="#restoration" class="nav-desktop__link gold-hover-link">Ремонт & Реставрация</a>
       </nav>
 
       <div class="header__actions">
@@ -43,7 +42,7 @@
             <path
               d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
           </svg>
-          @koko_recovery
+          koko_recovery
         </a>
       </div>
 
@@ -59,10 +58,9 @@
     <!-- Mobile Navigation Menu Dropdown -->
     <div id="mobileMenu" class="mobile-menu hidden">
       <div class="mobile-menu__nav">
-        <a href="#skills" onclick="toggleMobileMenu()" class="mobile-menu__link">Навыки</a>
-        <a href="#management" onclick="toggleMobileMenu()" class="mobile-menu__link">Управление мастерской</a>
-        <a href="#master-works" onclick="toggleMobileMenu()" class="mobile-menu__link">Работы с Учителем</a>
-        <a href="#sneakers" onclick="toggleMobileMenu()" class="mobile-menu__link">Портфолио Кроссовок</a>
+        <a href="#skills" onclick="toggleMobileMenu()" class="mobile-menu__link">Мои Навыки</a>
+        <a href="#management" onclick="toggleMobileMenu()" class="mobile-menu__link">Мастерская</a>
+        <a href="#sneakers" onclick="toggleMobileMenu()" class="mobile-menu__link">Работы</a>
         <a href="#restoration" onclick="toggleMobileMenu()" class="mobile-menu__link">Ремонт & Реставрация</a>
       </div>
       <div class="mobile-menu__footer">
@@ -85,21 +83,23 @@
           <span class="hero__subtitle">Bespoke Shoemaker & Luxury Leather Restorer</span>
         </h1>
 
-        <p class="hero__description">
-          Меня зовут <strong class="about-section__highlight">Niko Borovyk</strong>, мне 27 лет. Уже 8
-          лет я профессионально посвящаю себя традиционному обувному искусству и работе с элитной
-          кожей.
-          <br>
-          <br>
-          Мой путь начался с фундаментального обучения у опытного мастера по полному циклу
-          производства обуви ручной работы. Позже я получил богатейший практический опыт в ведущих
-          реставрационных ателье Украины, решая самые сложные технологические задачи.
-          <br>
-          <br>
-          Сегодня я развиваю собственную мастерскую <strong class="about-section__highlight">Koko</strong>,
-          параллельно создавая авторские коллекции
-          footwear-дизайна и выполняю заказы высокой сложности.
-        </p>
+        <div class="hero__description">
+          <p>
+            Меня зовут <strong class="about-section__highlight">Niko Borovyk</strong>, мне 27 лет. Уже 8
+            лет я профессионально посвящаю себя традиционному обувному искусству и работе с элитной
+            кожей.
+          </p>
+          <p>
+            Мой путь начался с фундаментального обучения у опытного мастера по полному циклу
+            производства обуви ручной работы. Позже я получил богатейший практический опыт в ведущих
+            реставрационных ателье Украины, решая самые сложные технологические задачи.
+          </p>
+          <p>
+            Сегодня я развиваю собственную мастерскую <strong class="about-section__highlight">Koko</strong>,
+            параллельно создавая авторские коллекции
+            footwear-дизайна и выполняю заказы высокой сложности.
+          </p>
+        </div>
 
         <!-- Action Buttons -->
         <div class="hero__cta-group">
@@ -176,100 +176,128 @@
       </div>
 
       <div class="skills-section__grid">
-
         <!-- Category A: Shoe Manufacturing -->
         <div class="skill-card">
-          <div>
+          <h3 class="skill-card__title">
             <div class="skill-card__badge">01</div>
-            <h3 class="skill-card__title">Производство обуви</h3>
-            <ul class="skill-card__list">
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Индивидуальное изготовление и подгонка колодок</span>
-              </li>
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Моделирование и разработка лекал</span>
-              </li>
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Раскрой кожи по лекалам & сборка заготовок</span>
-              </li>
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Затяжка заготовок на колодку</span>
-              </li>
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Формовка основных кожаных и картонных стелек</span>
-              </li>
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Работа с кожаной и резиновой подошвой</span>
-              </li>
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Изготовление наборных каблуков</span>
-              </li>
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Ручная прошивка, приклейка подошвы, профилактика</span>
-              </li>
-            </ul>
-          </div>
+            Производство обуви
+          </h3>
+          <ul class="skill-card__list">
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Индивидуальное изготовление колодок</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Моделирование</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Раскрой кожи по лекалам</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Сборка заготовок</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Затяжка заготовок на колодку</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Формовка основных кожаных стелек по колодке, так же работал с картонной</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Работа с кожаной и резиновой подошвой</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Изготовление каблуков</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Приклейка подошвы</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Установка набойок и профилактик</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Прошивка</span>
+            </li>
+          </ul>
         </div>
 
         <!-- Category B: Coloristics & Finishing -->
         <div class="skill-card">
-          <div>
-            <div class="skill-card__badge">02</div>
-            <h3 class="skill-card__title">Колористика и финиш</h3>
-            <ul class="skill-card__list">
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Покраска проникающими красителями (спиртовая/водная основа)</span>
-              </li>
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Работа с премиальной косметикой Saphir Medaille d'Or</span>
-              </li>
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Авторская колористика и точность подбора цвета</span>
-              </li>
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Художественный патинаж с плавными переходами</span>
-              </li>
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Зеркальная полировка и глассаж (Glaçage)</span>
-              </li>
-              <li class="skill-card__item">
-                <span class="skill-card__bullet">&bull;</span>
-                <span>Финишная гидрофобная и защитная обработка кожи</span>
-              </li>
-            </ul>
-          </div>
+          <h3 class="skill-card__title">
+            <div class="skill-card__badge">02</div>Колористика и финиш
+          </h3>
+          <ul class="skill-card__list">
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Покраска кожи проникающими красителями на спиртовой и водной основе</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Работа с профессиональной обувной косметикой Saphir и аналогичными составами</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Колористика и подбор цвета</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Патинаж с переходами цвета</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Полировка</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Глассаж</span>
+            </li>
+          </ul>
         </div>
 
         <!-- Category C: Workshop Roles -->
         <div class="skill-card">
-          <div>
-            <div class="skill-card__badge">03</div>
-            <h3 class="skill-card__title">Роли в мастерской</h3>
-            <p class="skill-card__roles-note">
-              Готов к интеграции на любую из позиций высококлассного ателье:
-            </p>
-            <ul class="skill-card__roles-list">
-              <li class="skill-card__role-item">Обувной мастер полного цикла</li>
-              <li class="skill-card__role-item">Мастер по изготовлению верха обуви</li>
-              <li class="skill-card__role-item">Мастер по затяжке обуви</li>
-              <li class="skill-card__role-item">Специалист по колористике и финишу</li>
-              <li class="skill-card__role-item">Мастер реставрации сумок и обуви</li>
-              <li class="skill-card__role-item">Мастер по индивидуальному пошиву</li>
-            </ul>
-          </div>
+          <h3 class="skill-card__title">
+            <div class="skill-card__badge">03</div>Роли в мастерской
+          </h3>
+          <ul class="skill-card__list">
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Обувной мастер полного цикла</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Мастер по изготовлению верха обуви</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Мастер по затяжке</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Мастер по сборке обуви</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Специалист по колористике и финишной обработке</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Мастер по ремонту и реставрации обуви</span>
+            </li>
+            <li class="skill-card__item">
+              <span class="skill-card__bullet">&bull;</span>
+              <span>Специалист по производству индивидуальной обуви</span>
+            </li>
+          </ul>
         </div>
 
       </div>
@@ -282,15 +310,13 @@
 
       <div class="management-section__header">
         <div class="management-section__title-group">
-          <span class="eyebrow__text">УПРАВЛЕНЧЕСКИЙ ОПЫТ</span>
           <h2 class="management-section__title">
-            Управление мастерской Koko
+            Управление мастерской
           </h2>
         </div>
         <div class="management-section__description-container">
           <p class="management-section__description">
-            Опыт создания, организации и бесперебойного управления собственным обувным ателье полного цикла.
-            Выстроенная логистика, контроль качества и клиентский сервис высочайшего стандарта.
+            Опыт управления собственной обувной мастерской и организации полного рабочего процесса.
           </p>
         </div>
       </div>
@@ -339,7 +365,7 @@
     </div>
   </section>
 
-  <!-- SECTION 4: SNEAKERS & BESPOKE PORTFOLIO (ПОРТФОЛИО КРОССОВОК) -->
+  <!-- SECTION 4: MY WORKS -->
   <section id="sneakers" class="sneakers-section">
     <div class="container">
 
@@ -359,10 +385,8 @@
 
         <!-- Sneaker 1 -->
         <div class="sneaker-card">
-          <div class="ph-container ph-container--aspect-square">
-            <span class="placeholder-box__filename">[ sneaker_1.jpg ]</span>
-            <span class="sneaker-card__ph-text">Custom Leather Sneaker #01</span>
-          </div>
+          <img src="assets/img/my-works/photo_1_2026-09-22_07-57-33.jpg" alt="Bespoke Trainer Leather & Suede"
+            class="sneaker-card__img">
           <div>
             <h3 class="sneaker-card__title">Bespoke Trainer Leather & Suede</h3>
             <p class="sneaker-card__desc">Разработка силуэта, сочетание замши премиум-класса и итальянской
@@ -372,10 +396,8 @@
 
         <!-- Sneaker 2 -->
         <div class="sneaker-card">
-          <div class="ph-container ph-container--aspect-square">
-            <span class="placeholder-box__filename">[ sneaker_2.jpg ]</span>
-            <span class="sneaker-card__ph-text">Custom Leather Sneaker #02</span>
-          </div>
+          <img src="assets/img/my-works/photo_2_2026-09-22_07-57-33.jpg" alt="High-Top Luxury Sneaker"
+            class="sneaker-card__img">
           <div>
             <h3 class="sneaker-card__title">High-Top Luxury Sneaker</h3>
             <p class="sneaker-card__desc">Высокий силуэт, полностью кожаный подклад и анатомическая стелька.
@@ -385,10 +407,8 @@
 
         <!-- Sneaker 3 -->
         <div class="sneaker-card">
-          <div class="ph-container ph-container--aspect-square">
-            <span class="placeholder-box__filename">[ sneaker_3.jpg ]</span>
-            <span class="sneaker-card__ph-text">Custom Leather Sneaker #03</span>
-          </div>
+          <img src="assets/img/my-works/photo_3_2026-09-22_07-57-33.jpg" alt="Minimalist Calfskin Low"
+            class="sneaker-card__img">
           <div>
             <h3 class="sneaker-card__title">Minimalist Calfskin Low</h3>
             <p class="sneaker-card__desc">Лаконичные кеды из телячьей кожи с ручным финишным патинажем.</p>
@@ -397,10 +417,8 @@
 
         <!-- Sneaker 4 -->
         <div class="sneaker-card">
-          <div class="ph-container ph-container--aspect-square">
-            <span class="placeholder-box__filename">[ sneaker_4.jpg ]</span>
-            <span class="sneaker-card__ph-text">Custom Leather Sneaker #04</span>
-          </div>
+          <img src="assets/img/my-works/photo_4_2026-09-22_07-57-33.jpg" alt="Exotic Inset Runner"
+            class="sneaker-card__img">
           <div>
             <h3 class="sneaker-card__title">Exotic Inset Runner</h3>
             <p class="sneaker-card__desc">Беговые силуэты с вставками из кожи питона и премиальной резиновой
@@ -410,27 +428,12 @@
 
         <!-- Sneaker 5 -->
         <div class="sneaker-card">
-          <div class="ph-container ph-container--aspect-square">
-            <span class="placeholder-box__filename">[ sneaker_5.jpg ]</span>
-            <span class="sneaker-card__ph-text">Custom Leather Sneaker #05</span>
-          </div>
+          <img src="assets/img/my-works/photo_5_2026-09-22_07-57-33.jpg" alt="Prototyping & Sole Construction"
+            class="sneaker-card__img">
           <div>
             <h3 class="sneaker-card__title">Prototyping & Sole Construction</h3>
             <p class="sneaker-card__desc">Прототипирование новой модели Koko, сборка заготовки на колодку.
             </p>
-          </div>
-        </div>
-
-        <!-- Sneaker 6 -->
-        <div class="sneaker-card">
-          <div class="ph-container ph-container--aspect-square">
-            <span class="placeholder-box__filename">[ sneaker_6.jpg ]</span>
-            <span class="sneaker-card__ph-text">Custom Leather Sneaker #06</span>
-          </div>
-          <div>
-            <h3 class="sneaker-card__title">Restored & Recolored Designer Sneaker</h3>
-            <p class="sneaker-card__desc">Восстановление цвета и перекраска брендовых кроссовок
-              премиум-сегмента.</p>
           </div>
         </div>
 
@@ -455,21 +458,15 @@
           <strong>Ватикана</strong>.
         </p>
       </div>
-      <div class="master-works-section__count">
-        5–6 Избранных Работ
-      </div>
     </div>
 
-    <!-- Master Works Gallery Grid (6 Placeholders) -->
+    <!-- Master Works Gallery Grid (16 photos) -->
     <div class="master-works-section__grid">
 
       <!-- Work 1 -->
       <div class="work-card">
-        <div class="ph-container ph-container--aspect-4-5">
-          <span class="placeholder-box__filename">[ master_work_1.jpg ]</span>
-          <span class="work-card__ph-title">Bespoke Oxford Shoes</span>
-          <span class="work-card__ph-tag">Vatican Order / Special Last</span>
-        </div>
+        <img src="assets/img/master-works/photo_1_2026-09-22_08-31-27.jpg" alt="Bespoke Oxford Shoes"
+          class="work-card__img">
         <div class="work-card__meta">
           <h3 class="work-card__title">Классические Оксфорды</h3>
           <span class="work-card__badge">Ручной шов</span>
@@ -481,11 +478,8 @@
 
       <!-- Work 2 -->
       <div class="work-card">
-        <div class="ph-container ph-container--aspect-4-5">
-          <span class="placeholder-box__filename">[ master_work_2.jpg ]</span>
-          <span class="work-card__ph-title">Presidential Ceremonial Footwear</span>
-          <span class="work-card__ph-tag">Hand-stitched Leather</span>
-        </div>
+        <img src="assets/img/master-works/photo_2_2026-09-22_08-31-27.jpg" alt="Presidential Ceremonial Footwear"
+          class="work-card__img">
         <div class="work-card__meta">
           <h3 class="work-card__title">Церемониальные Дерби</h3>
           <span class="work-card__badge">Патинаж</span>
@@ -497,11 +491,8 @@
 
       <!-- Work 3 -->
       <div class="work-card">
-        <div class="ph-container ph-container--aspect-4-5">
-          <span class="placeholder-box__filename">[ master_work_3.jpg ]</span>
-          <span class="work-card__ph-title">Exotic Leather Boots</span>
-          <span class="work-card__ph-tag">Crocodile & Box-calf</span>
-        </div>
+        <img src="assets/img/master-works/photo_3_2026-09-22_08-31-27.jpg" alt="Exotic Leather Boots"
+          class="work-card__img">
         <div class="work-card__meta">
           <h3 class="work-card__title">Ботинки из экзотической кожи</h3>
           <span class="work-card__badge">Экзотика</span>
@@ -513,11 +504,8 @@
 
       <!-- Work 4 -->
       <div class="work-card">
-        <div class="ph-container ph-container--aspect-4-5">
-          <span class="placeholder-box__filename">[ master_work_4.jpg ]</span>
-          <span class="work-card__ph-title">Hand-Welted Loafers</span>
-          <span class="work-card__ph-tag">Goodyear / Norwegian Welt</span>
-        </div>
+        <img src="assets/img/master-works/photo_4_2026-09-22_08-31-27.jpg" alt="Hand-Welted Loafers"
+          class="work-card__img">
         <div class="work-card__meta">
           <h3 class="work-card__title">Лоферы с норвежским рантом</h3>
           <span class="work-card__badge">Рантовый шов</span>
@@ -529,11 +517,8 @@
 
       <!-- Work 5 -->
       <div class="work-card">
-        <div class="ph-container ph-container--aspect-4-5">
-          <span class="placeholder-box__filename">[ master_work_5.jpg ]</span>
-          <span class="work-card__ph-title">Monk Strap Signature</span>
-          <span class="work-card__ph-tag">Brass Buckles & Polish</span>
-        </div>
+        <img src="assets/img/master-works/photo_5_2026-09-22_08-31-27.jpg" alt="Monk Strap Signature"
+          class="work-card__img">
         <div class="work-card__meta">
           <h3 class="work-card__title">Монки с подгонкой фурнитуры</h3>
           <span class="work-card__badge">Глассаж</span>
@@ -545,11 +530,8 @@
 
       <!-- Work 6 -->
       <div class="work-card">
-        <div class="ph-container ph-container--aspect-4-5">
-          <span class="placeholder-box__filename">[ master_work_6.jpg ]</span>
-          <span class="work-card__ph-title">Custom Last Sculpting</span>
-          <span class="work-card__ph-tag">Anatomical Wooden Lasts</span>
-        </div>
+        <img src="assets/img/master-works/photo_6_2026-09-22_08-31-27.jpg" alt="Custom Last Sculpting"
+          class="work-card__img">
         <div class="work-card__meta">
           <h3 class="work-card__title">Изготовление авторской колодки</h3>
           <span class="work-card__badge">Анатомия</span>
@@ -557,6 +539,56 @@
         <p class="work-card__desc">
           Моделирование деревянной колодки под уникальные анатомические параметры стопы заказчика.
         </p>
+      </div>
+
+      <!-- Work 7 -->
+      <div class="work-card">
+        <img src="assets/img/master-works/photo_7_2026-09-22_08-31-27.jpg" alt="Master work 7" class="work-card__img">
+      </div>
+
+      <!-- Work 8 -->
+      <div class="work-card">
+        <img src="assets/img/master-works/photo_8_2026-09-22_08-31-27.jpg" alt="Master work 8" class="work-card__img">
+      </div>
+
+      <!-- Work 9 -->
+      <div class="work-card">
+        <img src="assets/img/master-works/photo_9_2026-09-22_08-31-27.jpg" alt="Master work 9" class="work-card__img">
+      </div>
+
+      <!-- Work 10 -->
+      <div class="work-card">
+        <img src="assets/img/master-works/photo_10_2026-09-22_08-31-27.jpg" alt="Master work 10" class="work-card__img">
+      </div>
+
+      <!-- Work 11 -->
+      <div class="work-card">
+        <img src="assets/img/master-works/photo_11_2026-09-22_08-31-27.jpg" alt="Master work 11" class="work-card__img">
+      </div>
+
+      <!-- Work 12 -->
+      <div class="work-card">
+        <img src="assets/img/master-works/photo_12_2026-09-22_08-31-27.jpg" alt="Master work 12" class="work-card__img">
+      </div>
+
+      <!-- Work 13 -->
+      <div class="work-card">
+        <img src="assets/img/master-works/photo_13_2026-09-22_08-31-27.jpg" alt="Master work 13" class="work-card__img">
+      </div>
+
+      <!-- Work 14 -->
+      <div class="work-card">
+        <img src="assets/img/master-works/photo_14_2026-09-22_08-31-27.jpg" alt="Master work 14" class="work-card__img">
+      </div>
+
+      <!-- Work 15 -->
+      <div class="work-card">
+        <img src="assets/img/master-works/photo_15_2026-09-22_08-31-27.jpg" alt="Master work 15" class="work-card__img">
+      </div>
+
+      <!-- Work 16 -->
+      <div class="work-card">
+        <img src="assets/img/master-works/photo_16_2026-09-22_08-31-27.jpg" alt="Master work 16" class="work-card__img">
       </div>
 
     </div>
@@ -675,12 +707,12 @@
         <div class="footer__brand">
           <div class="footer__logo">
             <span class="footer__logo-title">Niko Borovyk</span>
-            <span class="footer__logo-subtitle">Koko Leather Recovery & Bespoke</span>
+            <span class="footer__logo-subtitle">Koko Leather Recovery</span>
           </div>
-          <p class="footer__brand-desc">
+          <!-- <p class="footer__brand-desc">
             Принимаю заказы на индивидуальный пошив, разработку моделей и сложное восстановление брендовых
             изделий по предварительной записи.
-          </p>
+          </p> -->
           <div class="footer__cta">
             <a href="https://www.instagram.com/koko_recovery?stkn=MWVoanUxcmNqZGQwZg%3D%3D&utm_source=qr"
               target="_blank" rel="noopener noreferrer" class="btn btn--gold">
@@ -691,12 +723,12 @@
 
         <div class="footer__links-grid">
           <div class="footer__column">
-            <span class="footer__col-title">Контакты & Визиты</span>
-            <p class="footer__text">Прием исключительно по предварительной записи</p>
+            <span class="footer__col-title">Контакты</span>
+            <!-- <p class="footer__text">Прием исключительно по предварительной записи</p>
             <p class="footer__text">Мастерская Koko</p>
             <button onclick="openModal()" class="footer__consult-link">
               Запросить консультацию &rarr;
-            </button>
+            </button> -->
           </div>
 
           <div class="footer__column">
@@ -716,7 +748,6 @@
       <!-- Bottom Copyright Bar -->
       <div class="footer__bottom">
         <div>&copy; 2026 Niko Borovyk / Koko Recovery. Все права защищены.</div>
-        <div>Haute Couture Leather Craftsmanship</div>
       </div>
 
     </div>
