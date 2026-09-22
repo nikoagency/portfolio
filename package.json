@@ -1,9 +1,9 @@
 {
-  "name": "navadwip-portfolio",
+  "name": "borovyk-portfolio",
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
-  "author": "",
+  "author": "vetaltor",
   "type": "module",
   "scripts": {
     "dev": "astro dev",

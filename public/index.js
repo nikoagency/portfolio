@@ -28,7 +28,7 @@ window.onclick = function (event) {
   if (event.target == modal) {
     closeModal();
   }
-}
+};
 
 // Form Submit
 function handleFormSubmit(e) {
@@ -58,7 +58,11 @@ function initGallery(trackId, dotsId) {
     dot.className = 'gallery__dot' + (i === 0 ? ' gallery__dot--active' : '');
     dot.setAttribute('aria-label', `Slide ${i + 1}`);
     dot.addEventListener('click', () => {
-      slides[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      slides[i].scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'start',
+      });
     });
     dotsContainer.appendChild(dot);
   });
@@ -67,30 +71,38 @@ function initGallery(trackId, dotsId) {
 
   function updateDots() {
     const scrollLeft = track.scrollLeft;
-    const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(track).gap) || 16;
+    const slideWidth =
+      slides[0].offsetWidth + parseInt(getComputedStyle(track).gap) || 16;
     const activeIndex = Math.round(scrollLeft / slideWidth);
-    dots.forEach((d, i) => d.classList.toggle('gallery__dot--active', i === activeIndex));
+    dots.forEach((d, i) =>
+      d.classList.toggle('gallery__dot--active', i === activeIndex)
+    );
   }
 
   // Debounced scroll listener
   let ticking = false;
   track.addEventListener('scroll', () => {
     if (!ticking) {
-      requestAnimationFrame(() => { updateDots(); ticking = false; });
+      requestAnimationFrame(() => {
+        updateDots();
+        ticking = false;
+      });
       ticking = true;
     }
   });
 
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
-      const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(track).gap) || 16;
+      const slideWidth =
+        slides[0].offsetWidth + parseInt(getComputedStyle(track).gap) || 16;
       track.scrollBy({ left: -slideWidth, behavior: 'smooth' });
     });
   }
 
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
-      const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(track).gap) || 16;
+      const slideWidth =
+        slides[0].offsetWidth + parseInt(getComputedStyle(track).gap) || 16;
       track.scrollBy({ left: slideWidth, behavior: 'smooth' });
     });
   }
@@ -130,5 +142,6 @@ lightbox.addEventListener('click', (e) => {
 });
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && lightbox.classList.contains('lightbox--open')) closeLightbox();
+  if (e.key === 'Escape' && lightbox.classList.contains('lightbox--open'))
+    closeLightbox();
 });

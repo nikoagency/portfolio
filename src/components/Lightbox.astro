@@ -1,0 +1,119 @@
+---
+const { locale } = Astro.props as { locale: string };
+import { getTranslations, type Locale } from '../i18n';
+const t = getTranslations(locale as Locale);
+---
+
+<div class="lightbox" data-lightbox aria-hidden="true">
+  <button class="lightbox__close" data-lightbox-close aria-label={t.close}
+    >×</button
+  ><img class="lightbox__img" data-lightbox-image-element alt="" />
+</div>
+
+<script is:inline>
+  const lightbox = document.querySelector('[data-lightbox]');
+  const lightboxImage = document.querySelector('[data-lightbox-image-element]');
+  const lightboxClose = document.querySelector('[data-lightbox-close]');
+
+  document.querySelectorAll('[data-lightbox-image]').forEach((trigger) =>
+    trigger.addEventListener('click', () => {
+      lightboxImage.src = trigger.dataset.lightboxImage;
+      lightboxImage.alt = trigger.querySelector('img')?.alt || '';
+      lightbox.classList.add('lightbox--open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    })
+  );
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('lightbox--open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  lightboxClose?.addEventListener('click', closeLightbox);
+  lightbox?.addEventListener('click', (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeLightbox();
+  });
+</script>
+
+<style>
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity var(--transition-slow),
+      visibility var(--transition-slow);
+  }
+
+  .lightbox--open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .lightbox__img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    box-shadow: var(--shadow-2xl);
+    border: 1px solid var(--color-gold-alpha-30);
+    transform: scale(0.92);
+    transition: transform var(--transition-cubic);
+  }
+
+  .lightbox--open .lightbox__img {
+    transform: scale(1);
+  }
+
+  .lightbox__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 10;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border-radius: 50%;
+  }
+
+  .lightbox__close:hover {
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+    color: var(--color-dark);
+  }
+
+  .lightbox__close-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  img:not([class*='icon']):not([class*='logo']) {
+    cursor: pointer;
+  }
+
+  .sneaker-card,
+  .work-card,
+  .gallery__slide {
+    border: 0;
+  }
+</style>

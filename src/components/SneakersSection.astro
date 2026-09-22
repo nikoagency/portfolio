@@ -1,0 +1,130 @@
+---
+import { getTranslations, type Locale } from '../i18n';
+
+const { locale, ownWorks } = Astro.props as { locale: Locale; ownWorks: string[] };
+const t = getTranslations(locale);
+---
+
+<section id="sneakers" class="sneakers-section">
+  <div class="container">
+    <div class="sneakers-section__header">
+      <h2 class="sneakers-section__title">{t.ownWorks}</h2><p
+        class="sneakers-section__subtitle"
+      >
+        {t.ownWorksLead}
+      </p>
+    </div><div class="sneakers-section__grid">
+      {
+        ownWorks.map((image, index) => (
+          <button
+            class="sneaker-card"
+            data-lightbox-image={image}
+            aria-label={`${t.ownWorks} ${index + 1}`}
+          >
+            <img
+              src={image}
+              alt={`${t.ownWorks} ${index + 1}`}
+              class="sneaker-card__img"
+              loading="lazy"
+            />
+          </button>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .sneakers-section {
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    background-color: var(--color-sand);
+    border-top: 1px solid var(--color-gray-200);
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .sneakers-section__header {
+    text-align: center;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .sneakers-section__title {
+    font-size: var(--fs-3xl);
+    font-weight: 300;
+    color: var(--color-dark);
+  }
+
+  .sneakers-section__subtitle {
+    color: var(--color-gray-800);
+    font-weight: 300;
+  }
+
+  .sneakers-section__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .sneaker-card {
+    background-color: var(--color-white);
+    padding: 1rem;
+    border: 1px solid var(--color-gray-200);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .sneaker-card__img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+  }
+
+  .sneaker-card__ph-text {
+    font-size: var(--fs-base);
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+  }
+
+  .sneaker-card__title {
+    font-size: var(--fs-base);
+    font-weight: 500;
+    color: var(--color-dark);
+  }
+
+  .sneaker-card__desc {
+    font-size: var(--fs-xs);
+    color: var(--color-gray-500);
+    font-weight: 300;
+    margin-top: 0.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .sneakers-section__title {
+      font-size: var(--fs-4xl);
+    }
+
+    .sneakers-section__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .sneakers-section__title {
+      font-size: var(--fs-5xl);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .sneakers-section__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

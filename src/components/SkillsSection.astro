@@ -1,0 +1,172 @@
+---
+import { getTranslations, type Locale } from '../i18n';
+
+const { locale } = Astro.props as { locale: Locale };
+const t = getTranslations(locale);
+---
+
+<section id="skills" class="skills-section">
+  <div class="container">
+    <div class="skills-section__header">
+      <h2 class="skills-section__title">{t.skills}</h2>
+    </div>
+    <div class="skills-section__grid">
+      {
+        t.skillGroups.map(([heading, items], index) => (
+          <article class="skill-card">
+            <>
+              <h3 class="skill-card__title">
+                <span class="skill-card__badge">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                {heading}
+              </h3>
+              <ul class="skill-card__list">
+                {items.map((item) => (
+                  <li class="skill-card__item">
+                    <span class="skill-card__bullet">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .skills-section {
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    background-color: var(--color-sand);
+    border-top: 1px solid var(--color-gray-200);
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .skills-section__header {
+    text-align: center;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .skills-section__title {
+    font-size: var(--fs-3xl);
+    font-weight: 300;
+    color: var(--color-dark);
+  }
+
+  .skills-section__subtitle {
+    color: var(--color-gray-500);
+    font-size: var(--fs-sm);
+    font-weight: 300;
+  }
+
+  .skills-section__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .skill-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    padding: 2rem;
+    justify-content: space-between;
+    transition: border-color var(--transition-fast);
+  }
+
+  .skill-card:hover {
+    border-color: var(--color-gold);
+  }
+
+  .skill-card__badge {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--color-gold-alpha-10);
+    color: var(--color-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  .skill-card__title {
+    display: flex;
+    gap: 1rem;
+    font-size: var(--fs-3xl);
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-gray-200);
+  }
+
+  .skill-card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--color-gray-800);
+    font-weight: 300;
+    list-style: none;
+  }
+
+  .skill-card__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .skill-card__bullet {
+    color: var(--color-gold);
+    margin-top: 0.125rem;
+  }
+
+  .skill-card__roles-note {
+    font-size: var(--fs-11);
+    color: var(--color-gray-500);
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .skill-card__roles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    font-size: var(--fs-xs);
+    color: var(--color-gray-700);
+    font-weight: 500;
+    list-style: none;
+  }
+
+  .skill-card__role-item {
+    padding: 0.375rem 0.75rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+  }
+
+  @media (min-width: 640px) {
+    .skills-section__title {
+      font-size: var(--fs-4xl);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .skills-section__title {
+      font-size: var(--fs-5xl);
+    }
+
+    .skills-section__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
