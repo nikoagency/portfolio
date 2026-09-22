@@ -604,6 +604,7 @@ button {
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .hero__card-content {
@@ -752,15 +753,29 @@ button {
   }
 
   .hero__content {
-    grid-column: span 7 / span 7;
+    grid-column: 6 / -1;
   }
 
   .hero__media {
-    grid-column: span 5 / span 5;
+    grid-column: 1 / 6;
   }
 
   .hero__title {
     font-size: var(--fs-7xl);
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero__media {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__image {
+    max-height: 600px;
+    object-fit: cover;
   }
 }
 
