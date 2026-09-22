@@ -980,6 +980,9 @@ button {
 .skills-section {
   padding-top: 6rem;
   padding-bottom: 6rem;
+  background-color: var(--color-sand);
+  border-top: 1px solid var(--color-gray-200);
+  border-bottom: 1px solid var(--color-gray-200);
 }
 
 .skills-section__header {
