@@ -536,10 +536,8 @@ button {
 }
 
 .hero__cta-group {
-  padding-top: 0.5rem;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   gap: 1.5rem;
 }
 
@@ -836,15 +834,11 @@ button {
   font-weight: 500;
 }
 
-.about-section__instagram-container {
-  padding-top: 1rem;
-}
-
 .about-section__instagram-card {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 1rem;
+  padding: 10px;
   background-color: var(--color-white);
   border: 1px solid var(--color-gold-alpha-30);
   transition: border-color var(--transition-fast);
@@ -978,7 +972,7 @@ button {
 
 /* BEM Block: Skills Section */
 .skills-section {
-  padding-top: 6rem;
+  padding-top: 5rem;
   padding-bottom: 6rem;
   background-color: var(--color-sand);
   border-top: 1px solid var(--color-gray-200);
