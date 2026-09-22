@@ -99,7 +99,7 @@ const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
   </div>
 </footer>
 
-<style is:global>
+<style>
   .footer {
     background-color: var(--color-dark);
     color: var(--color-white);
@@ -326,6 +326,13 @@ const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
 
     .footer__bottom-divider {
       display: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .footer__top {
+      border-bottom: none;
+      padding-bottom: 1rem;
     }
   }
 
