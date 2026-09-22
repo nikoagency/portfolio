@@ -1,0 +1,86 @@
+---
+import { type Locale, getTranslations } from '../i18n';
+import { url } from '../url';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+
+const { locale } = Astro.props as { locale: Locale };
+const t = getTranslations(locale);
+const instagram =
+  'https://www.instagram.com/koko_recovery?stkn=MWVoanUxcmNqZGQwZg%3D%3D&utm_source=qr';
+const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
+---
+
+<header class="header">
+  <div class="container header__inner">
+    <Logo locale={locale} />
+    <nav class="nav-desktop" aria-label={t.navigation}>
+      {
+        navLinks.map((id, index) => (
+          <a href={`#${id}`} class="nav-desktop__link gold-hover-link">
+            {t.nav[index]}
+          </a>
+        ))
+      }
+    </nav>
+<div class="header__actions-group">
+          <LanguageSwitcher locale={locale} />
+          <button
+            class="header__mobile-toggle"
+            aria-label={t.menu}
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg
+              class="header__mobile-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M4 6h16M4 12h16M4 18h16"></path></svg
+            >
+          </button>
+        </div>
+  </div>
+  <div class="mobile-menu hidden" data-mobile-menu>
+    <div class="mobile-menu__nav">
+      {
+        navLinks.map((id, index) => (
+          <a href={`#${id}`} class="mobile-menu__link">
+            {t.nav[index]}
+          </a>
+        ))
+      }
+    </div>
+    <div class="mobile-menu__footer">
+      <a
+        href={instagram}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mobile-menu__instagram"
+      >
+        <Icon id="instagram" width={20} height={20} /> Koko recovery
+      </a>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  const menuButton = document.querySelector('[data-menu-button]');
+  const mobileMenu = document.querySelector('[data-mobile-menu]');
+  menuButton?.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('hidden') === false;
+    menuButton.setAttribute('aria-expanded', String(open));
+  });
+  mobileMenu
+    ?.querySelectorAll('a')
+    .forEach((link) =>
+      link.addEventListener('click', () =>
+        mobileMenu.classList.add('hidden')
+      )
+    );
+</script>

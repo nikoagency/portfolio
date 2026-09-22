@@ -1,9 +1,7 @@
 ---
-import { locales, type Locale, getTranslations } from '../i18n';
+import { type Locale, getTranslations } from '../i18n';
 import { url } from '../url';
 import Hero from './Hero.astro';
-import LanguageSwitcher from './LanguageSwitcher.astro';
-import Logo from './Logo.astro';
 import SkillsSection from './SkillsSection.astro';
 import ManagementSection from './ManagementSection.astro';
 import SneakersSection from './SneakersSection.astro';
@@ -11,11 +9,10 @@ import MasterWorksSection from './MasterWorksSection.astro';
 import RestorationSection from './RestorationSection.astro';
 import Lightbox from './Lightbox.astro';
 import Footer from './Footer.astro';
+import Header from './Header.astro';
 
 const { locale } = Astro.props as { locale: Locale };
 const t = getTranslations(locale);
-const instagram =
-  'https://www.instagram.com/koko_recovery?stkn=MWVoanUxcmNqZGQwZg%3D%3D&utm_source=qr';
 const ownWorks = Array.from({ length: 5 }, (_, index) =>
   url(`/img/my-works/photo_${index + 1}_2026-09-22_07-57-33.avif`)
 );
@@ -32,7 +29,6 @@ const groups = [
   ['shoes', 3, 4],
   ['shoes', 4, 2],
 ] as const;
-const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
 ---
 
 <!doctype html>
@@ -56,65 +52,7 @@ const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
     />
   </head>
   <body>
-    <header class="header">
-      <div class="container header__inner">
-        <Logo locale={locale} />
-        <nav class="nav-desktop" aria-label={t.navigation}>
-          {
-            navLinks.map((id, index) => (
-              <a href={`#${id}`} class="nav-desktop__link gold-hover-link">
-                {t.nav[index]}
-              </a>
-            ))
-          }
-        </nav>
-        <!-- <div class="header__actions">
-          <a
-            href={instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="header__instagram">@koko_recovery</a>
-        </div> -->
-        <LanguageSwitcher locale={locale} />
-        <button
-          class="header__mobile-toggle"
-          aria-label={t.menu}
-          aria-expanded="false"
-          data-menu-button
-        >
-          <svg
-            class="header__mobile-icon"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            ><path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              d="M4 6h16M4 12h16M4 18h16"></path></svg
-          >
-        </button>
-      </div>
-      <div class="mobile-menu hidden" data-mobile-menu>
-        <div class="mobile-menu__nav">
-          {
-            navLinks.map((id, index) => (
-              <a href={`#${id}`} class="mobile-menu__link">
-                {t.nav[index]}
-              </a>
-            ))
-          }
-        </div>
-        <div class="mobile-menu__footer">
-          <a
-            href={instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mobile-menu__instagram">Instagram @koko_recovery</a
-          >
-        </div>
-      </div>
-    </header>
+    <Header locale={locale} />
 
     <main>
       <Hero locale={locale} />
@@ -129,19 +67,6 @@ const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
     <Lightbox locale={locale} />
 
     <script is:inline>
-      const menuButton = document.querySelector('[data-menu-button]');
-      const mobileMenu = document.querySelector('[data-mobile-menu]');
-      menuButton?.addEventListener('click', () => {
-        const open = mobileMenu.classList.toggle('hidden') === false;
-        menuButton.setAttribute('aria-expanded', String(open));
-      });
-      mobileMenu
-        ?.querySelectorAll('a')
-        .forEach((link) =>
-          link.addEventListener('click', () =>
-            mobileMenu.classList.add('hidden')
-          )
-        );
       document.querySelectorAll('.gallery').forEach((gallery) => {
         const track = gallery.querySelector('.gallery__track');
         const dots = gallery.querySelectorAll('.gallery__dot');
