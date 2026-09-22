@@ -1,7 +1,12 @@
 {
   "title": "Niko Borovyk — Shoemaker & Leather Restorer",
   "role": "Bespoke Shoemaker & Restorer",
-  "nav": ["Skills", "Workshop", "Works", "Repair & Restoration"],
+  "nav": [
+    "Skills",
+    "Workshop",
+    "Works",
+    "Repair & Restoration"
+  ],
   "hero": [
     "My name is Niko Borovyk. For 8 years, I have worked professionally in traditional shoemaking and premium leather care.",
     "My path began with comprehensive training from an experienced master in the full cycle of handmade shoe production. Later, I gained extensive practical experience in leading restoration ateliers in Ukraine, solving complex technical challenges.",
@@ -55,25 +60,37 @@
   "management": "Workshop Management",
   "managementLead": "Experience managing my own shoe workshop and organising the complete working process.",
   "managementCards": [
-    ["Supply", [
-      "Purchasing materials and consumables",
-      "Selecting leather, soles, hardware, and professional chemicals",
-      "Working with suppliers"
-    ]],
-    ["Processes", [
-      "Planning and order allocation",
-      "Distributing work among craftsmen",
-      "Quality and deadline control",
-      "Organising workflow and workshop workload"
-    ]],
-    ["Economics", [
-      "Cost calculation and pricing"
-    ]],
-    ["Service", [
-      "Client communication and order intake",
-      "Order follow-through from intake to delivery",
-      "Workspace and production process organisation"
-    ]]
+    [
+      "Supply",
+      [
+        "Purchasing materials and consumables",
+        "Selecting leather, soles, hardware, and professional chemicals",
+        "Working with suppliers"
+      ]
+    ],
+    [
+      "Processes",
+      [
+        "Planning and order allocation",
+        "Distributing work among craftsmen",
+        "Quality and deadline control",
+        "Organising workflow and workshop workload"
+      ]
+    ],
+    [
+      "Economics",
+      [
+        "Cost calculation and pricing"
+      ]
+    ],
+    [
+      "Service",
+      [
+        "Client communication and order intake",
+        "Order follow-through from intake to delivery",
+        "Workspace and production process organisation"
+      ]
+    ]
   ],
   "ownWorks": "My Work",
   "ownWorksLead": "Every stage completed independently.",
@@ -96,8 +113,10 @@
   ],
   "bags": "Bags",
   "shoes": "Shoes",
-  "footerInstagram": "Visit Koko on Instagram",
+  "footerInstagram": "Koko Recovery",
   "contacts": "Contact",
+  "emailLabel": "Email",
+  "messengersLabel": "Telegram / Viber / WhatsApp",
   "navigation": "Navigation",
   "menu": "Open menu",
   "previous": "Previous image",

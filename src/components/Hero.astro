@@ -1,11 +1,11 @@
 ---
 import { getTranslations, type Locale } from '../i18n';
+import { url } from '../url';
 import Icon from './Icon.astro';
 
 const { locale } = Astro.props as { locale: Locale };
 const t = getTranslations(locale);
-const instagram =
-  'https://www.instagram.com/koko_recovery?stkn=MWVoanUxcmNqZGQwZg%3D%3D&utm_source=qr';
+const instagram = 'https://www.instagram.com/koko_recovery';
 ---
 
 <section class="container hero">
@@ -13,7 +13,11 @@ const instagram =
     <div class="hero__media">
       <div class="hero__frame-accent"></div>
       <div class="hero__image-card">
-        <img src="/img/photo.avif" alt="Niko Borovyk" class="hero__image" />
+        <img
+          src={url('/img/photo.avif')}
+          alt="Niko Borovyk"
+          class="hero__image"
+        />
       </div>
     </div>
     <div class="hero__content">

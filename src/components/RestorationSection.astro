@@ -1,5 +1,6 @@
 ---
 import { getTranslations, type Locale } from '../i18n';
+import { url } from '../url';
 
 const { locale, groups } = Astro.props as {
   locale: Locale;
@@ -53,11 +54,11 @@ const t = getTranslations(locale);
                         {Array.from({ length: total }, (_, index) => (
                           <button
                             class="gallery__slide"
-                            data-lightbox-image={`/img/restoration/${kind}/${set}/${index + 1}.avif`}
+                            data-lightbox-image={url(`/img/restoration/${kind}/${set}/${index + 1}.avif`)}
                             aria-label={`${kind} ${set}, ${index + 1}`}
                           >
                             <img
-                              src={`/img/restoration/${kind}/${set}/${index + 1}.avif`}
+                              src={url(`/img/restoration/${kind}/${set}/${index + 1}.avif`)}
                               alt={kind === 'bags' ? t.bags : t.shoes}
                               loading="lazy"
                             />

@@ -1,0 +1,345 @@
+---
+import { type Locale, getTranslations } from '../i18n';
+import Icon from './Icon.astro';
+
+const { locale } = Astro.props as { locale: Locale };
+const t = getTranslations(locale);
+const instagram =
+  'https://www.instagram.com/koko_recovery?stkn=MWVoanUxcmNqZGQwZg%3D%3D&utm_source=qr';
+const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <span class="footer__logo-title">Niko Borovyk</span><span
+            class="footer__logo-subtitle">{t.role}</span
+          >
+        </div><div class="footer__cta">
+          <a
+            href={instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--gold"><Icon id="instagram" /> {t.footerInstagram}</a
+          >
+        </div>
+      </div><div class="footer__links-grid">
+        <div class="footer__column">
+          <span class="footer__col-title">
+            {t.contacts}
+          </span>
+          <div class="footer__contact-item">
+            <svg
+              class="footer__contact-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+              ></path></svg
+            >
+            <div class="footer__contact-body">
+              <span class="footer__contact-label">{t.emailLabel}</span>
+              <a href="mailto:Kol.di@icloud.com" class="footer__contact-link"
+                >Kol.di@icloud.com</a
+              >
+            </div>
+          </div>
+          <div class="footer__contact-item">
+            <svg
+              class="footer__contact-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+              ></path></svg
+            >
+            <div class="footer__contact-body">
+              <span class="footer__contact-label">{t.messengersLabel}</span>
+              <a href="tel:+380730989885" class="footer__contact-link"
+                >+380730989885</a
+              >
+            </div>
+          </div>
+        </div><div class="footer__column">
+          <span class="footer__col-title">{t.navigation}</span><ul
+            class="footer__nav-list"
+          >
+            {
+              navLinks.map((id, index) => (
+                <li>
+                  <a href={`#${id}`} class="footer__nav-link">
+                    {t.nav[index]}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div><div class="footer__bottom">
+      <div class="footer__bottom-divider"></div>
+      <div class="footer__bottom-content">
+        <span>© 2026 Niko Borovyk</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style is:global>
+  .footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(255, 255, 255, 0.012) 40px,
+      rgba(255, 255, 255, 0.012) 41px
+    );
+    pointer-events: none;
+  }
+
+  .footer__top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid var(--color-gray-800);
+    position: relative;
+  }
+
+  .footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer__logo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__logo-title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-3xl);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-white);
+  }
+
+  .footer__logo-subtitle {
+    font-size: var(--fs-xs);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    font-weight: 500;
+    margin-top: 0.25rem;
+  }
+
+  .footer__brand-desc {
+    color: var(--color-gray-400);
+    font-size: var(--fs-sm);
+    font-weight: 300;
+    line-height: 1.625;
+    max-width: 28rem;
+  }
+
+  .footer__cta {
+    padding-top: 0.5rem;
+  }
+
+  .footer__links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .footer__column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer__col-title {
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-gold);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer__contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-left: 1px solid var(--color-gray-800);
+    transition: border-color var(--transition-fast);
+  }
+
+  .footer__contact-item:hover {
+    border-left-color: var(--color-gold);
+  }
+
+  .footer__contact-icon {
+    color: var(--color-gold);
+    opacity: 0.6;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .footer__contact-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .footer__contact-label {
+    font-size: var(--fs-11);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-gray-500);
+    font-weight: 400;
+  }
+
+  .footer__contact-link {
+    font-size: var(--fs-sm);
+    color: var(--color-gray-300);
+    font-weight: 300;
+    transition: color var(--transition-fast);
+  }
+
+  .footer__contact-link:hover {
+    color: var(--color-gold);
+  }
+
+  .footer__text {
+    font-size: var(--fs-xs);
+    color: var(--color-gray-300);
+    font-weight: 300;
+  }
+
+  .footer__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    color: var(--color-gray-300);
+    font-weight: 300;
+  }
+
+  .footer__nav-link {
+    transition: color var(--transition-fast);
+    position: relative;
+    display: inline-block;
+  }
+
+  .footer__nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-gold);
+    transition: width var(--transition-fast);
+  }
+
+  .footer__nav-link:hover {
+    color: var(--color-white);
+  }
+
+  .footer__nav-link:hover::after {
+    width: 100%;
+  }
+
+  .footer__bottom {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    color: var(--color-gray-300);
+    text-align: center;
+    font-weight: 300;
+  }
+
+  .footer__bottom-divider {
+    width: 3rem;
+    height: 1px;
+    background-color: var(--color-gold);
+    opacity: 0.4;
+  }
+
+  .footer__bottom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .footer__bottom-tagline {
+    color: var(--color-gray-600);
+    font-size: var(--fs-11);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 640px) {
+    .footer__bottom {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .footer__bottom-content {
+      flex-direction: row;
+      gap: 0.75rem;
+    }
+
+    .footer__bottom-divider {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer__top {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .footer__brand {
+      grid-column: span 6 / span 6;
+    }
+
+    .footer__links-grid {
+      grid-column: span 6 / span 6;
+    }
+  }
+</style>

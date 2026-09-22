@@ -1,7 +1,12 @@
 {
   "title": "Niko Borovyk — Cipőkészítő és bőrrestaurátor",
   "role": "Egyedi cipőkészítő és restaurátor",
-  "nav": ["Szakértelem", "Műhely", "Munkák", "Javítás és restaurálás"],
+  "nav": [
+    "Szakértelem",
+    "Műhely",
+    "Munkák",
+    "Javítás és restaurálás"
+  ],
   "hero": [
     "Niko Borovyk vagyok. Nyolc éve foglalkozom hivatásszerűen hagyományos cipőkészítéssel és prémium bőráruk ápolásával.",
     "Utam egy tapasztalt mesternél, a kézzel készített cipők teljes gyártási folyamatának alapos elsajátításával indult. Később vezető ukrajnai restaurátorműhelyekben szereztem jelentős gyakorlati tapasztalatot, összetett technológiai feladatokat megoldva.",
@@ -55,25 +60,37 @@
   "management": "Műhelyvezetés",
   "managementLead": "Tapasztalat saját cipőműhely vezetésében és a teljes munkafolyamat megszervezésében.",
   "managementCards": [
-    ["Beszerzés", [
-      "Anyagok és fogyóeszközök beszerzése",
-      "Bőrök, talpak, vasalások és professzionális vegyszerek kiválasztása",
-      "Kapcsolattartás beszállítókkal"
-    ]],
-    ["Folyamatok", [
-      "Megrendelések tervezése és elosztása",
-      "Munka elosztása a mesterek között",
-      "Minőség- és határidő-ellenőrzés",
-      "Munkafolyamat és műhelyterhelés szervezése"
-    ]],
-    ["Gazdaságosság", [
-      "Költségszámítás és árképzés"
-    ]],
-    ["Szolgáltatás", [
-      "Ügyfélkapcsolatok és megrendelések fogadása",
-      "Megrendelések nyomon követése átvételtől átadásig",
-      "Munkaterület és gyártási folyamat szervezése"
-    ]]
+    [
+      "Beszerzés",
+      [
+        "Anyagok és fogyóeszközök beszerzése",
+        "Bőrök, talpak, vasalások és professzionális vegyszerek kiválasztása",
+        "Kapcsolattartás beszállítókkal"
+      ]
+    ],
+    [
+      "Folyamatok",
+      [
+        "Megrendelések tervezése és elosztása",
+        "Munka elosztása a mesterek között",
+        "Minőség- és határidő-ellenőrzés",
+        "Munkafolyamat és műhelyterhelés szervezése"
+      ]
+    ],
+    [
+      "Gazdaságosság",
+      [
+        "Költségszámítás és árképzés"
+      ]
+    ],
+    [
+      "Szolgáltatás",
+      [
+        "Ügyfélkapcsolatok és megrendelések fogadása",
+        "Megrendelések nyomon követése átvételtől átadásig",
+        "Munkaterület és gyártási folyamat szervezése"
+      ]
+    ]
   ],
   "ownWorks": "Saját munkáim",
   "ownWorksLead": "Minden munkafázist önállóan végzek.",
@@ -96,8 +113,10 @@
   ],
   "bags": "Táskák",
   "shoes": "Cipők",
-  "footerInstagram": "Koko az Instagramon",
+  "footerInstagram": "Koko Recovery",
   "contacts": "Kapcsolat",
+  "emailLabel": "E-mail",
+  "messengersLabel": "Telegram / Viber / WhatsApp",
   "navigation": "Navigáció",
   "menu": "Menü megnyitása",
   "previous": "Előző kép",

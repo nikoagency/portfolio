@@ -1,9 +1,11 @@
 ---
 export type IconId = 'instagram' | 'telegram';
 
-const { id, ...rest } = Astro.props as { id: IconId };
+import { url } from '../url';
+
+const { id, width = 24, height = 24, ...rest } = Astro.props as { id: IconId; width?: number; height?: number };
 ---
 
-<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" {...rest}>
-  <use href={`/icons.svg#${id}`}></use>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" {width} {height} {...rest}>
+  <use href={url(`/icons.svg#${id}`)}></use>
 </svg>

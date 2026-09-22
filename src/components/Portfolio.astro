@@ -1,5 +1,6 @@
 ---
 import { locales, type Locale, getTranslations } from '../i18n';
+import { url } from '../url';
 import Hero from './Hero.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 import Logo from './Logo.astro';
@@ -9,18 +10,17 @@ import SneakersSection from './SneakersSection.astro';
 import MasterWorksSection from './MasterWorksSection.astro';
 import RestorationSection from './RestorationSection.astro';
 import Lightbox from './Lightbox.astro';
+import Footer from './Footer.astro';
 
 const { locale } = Astro.props as { locale: Locale };
 const t = getTranslations(locale);
 const instagram =
   'https://www.instagram.com/koko_recovery?stkn=MWVoanUxcmNqZGQwZg%3D%3D&utm_source=qr';
-const ownWorks = Array.from(
-  { length: 5 },
-  (_, index) => `/img/my-works/photo_${index + 1}_2026-09-22_07-57-33.avif`
+const ownWorks = Array.from({ length: 5 }, (_, index) =>
+  url(`/img/my-works/photo_${index + 1}_2026-09-22_07-57-33.avif`)
 );
-const masterWorks = Array.from(
-  { length: 16 },
-  (_, index) => `/img/master-works/photo_${index + 1}_2026-09-22_08-31-27.avif`
+const masterWorks = Array.from({ length: 16 }, (_, index) =>
+  url(`/img/master-works/photo_${index + 1}_2026-09-22_08-31-27.avif`)
 );
 const groups = [
   ['bags', 1, 5],
@@ -42,7 +42,8 @@ const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={t.role} />
     <title>{t.title}</title>
-    <link rel="stylesheet" href="/index.css" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+    <link rel="stylesheet" href="/portfolio/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="preconnect"
@@ -109,7 +110,8 @@ const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
             href={instagram}
             target="_blank"
             rel="noopener noreferrer"
-            class="mobile-menu__instagram">Instagram @koko_recovery</a>
+            class="mobile-menu__instagram">Instagram @koko_recovery</a
+          >
         </div>
       </div>
     </header>
@@ -122,42 +124,7 @@ const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
       <MasterWorksSection locale={locale} masterWorks={masterWorks} />
       <RestorationSection locale={locale} groups={groups} />
     </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__top">
-          <div class="footer__brand">
-            <div class="footer__logo">
-              <span class="footer__logo-title">Niko Borovyk</span><span
-                class="footer__logo-subtitle">Koko Leather Recovery</span>
-            </div><div class="footer__cta">
-              <a
-                href={instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn--gold">{t.footerInstagram}</a>
-            </div>
-          </div><div class="footer__links-grid">
-            <div class="footer__column">
-              <span class="footer__col-title">{t.contacts}</span>
-            </div><div class="footer__column">
-              <span class="footer__col-title">{t.navigation}</span><ul
-                class="footer__nav-list"
-              >
-                {
-                  navLinks.map((id, index) => (
-                    <li>
-                      <a href={`#${id}`} class="footer__nav-link">
-                        {t.nav[index]}
-                      </a>
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
-          </div>
-        </div><div class="footer__bottom"><div>© 2026 Niko Borovyk</div></div>
-      </div>
-    </footer>
+    <Footer locale={locale} />
     <Lightbox locale={locale} />
     <script is:inline>
       const menuButton = document.querySelector('[data-menu-button]');
