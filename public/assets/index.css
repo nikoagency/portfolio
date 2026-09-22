@@ -1503,7 +1503,8 @@ button {
 
 /* Showcase Groups */
 .restoration__group-title {
-  font-size: var(--fs-2xl);
+  font-size: var(--fs-3xl);
+  text-align: center;
   font-weight: 400;
   color: var(--color-dark);
   margin-bottom: 1.5rem;
