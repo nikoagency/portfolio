@@ -348,12 +348,12 @@ button {
 }
 
 .logo__subtitle {
+  text-align: center;
   font-size: var(--fs-9);
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--color-gold);
   font-weight: 500;
-  margin-top: -0.25rem;
 }
 
 .nav-desktop {
@@ -1029,8 +1029,8 @@ button {
 }
 
 .skill-card {
-  background-color: var(--color-cream);
-  border: 1px solid var(--color-gray-200-alpha-60);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
   padding: 2rem;
   justify-content: space-between;
   transition: border-color var(--transition-fast);
