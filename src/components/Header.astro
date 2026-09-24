@@ -14,6 +14,37 @@ const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
 
 <header class="header">
   <div class="container header__inner">
+    <button
+      class="header__mobile-toggle"
+      aria-label={t.menu}
+      aria-expanded="false"
+      data-menu-button
+    >
+      <svg
+        class="header__mobile-icon"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        data-menu-icon
+        ><path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M4 6h16M4 12h16M4 18h16"></path></svg
+      >
+      <svg
+        class="header__mobile-icon header__mobile-icon--close"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        data-menu-icon-close
+        ><path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+          d="M6 6l12 12M18 6l-12 12"></path></svg
+      >
+    </button>
     <Logo locale={locale} />
     <nav class="nav-desktop" aria-label={t.navigation}>
       {
@@ -26,24 +57,6 @@ const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
     </nav>
 <div class="header__actions-group">
           <LanguageSwitcher locale={locale} />
-          <button
-            class="header__mobile-toggle"
-            aria-label={t.menu}
-            aria-expanded="false"
-            data-menu-button
-          >
-            <svg
-              class="header__mobile-icon"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              ><path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M4 6h16M4 12h16M4 18h16"></path></svg
-            >
-          </button>
         </div>
   </div>
   <div class="mobile-menu hidden" data-mobile-menu>
@@ -72,15 +85,24 @@ const navLinks = ['skills', 'management', 'sneakers', 'restoration'];
 <script is:inline>
   const menuButton = document.querySelector('[data-menu-button]');
   const mobileMenu = document.querySelector('[data-mobile-menu]');
+  const menuIcon = document.querySelector('[data-menu-icon]');
+  const menuIconClose = document.querySelector('[data-menu-icon-close]');
   menuButton?.addEventListener('click', () => {
     const open = mobileMenu.classList.toggle('hidden') === false;
     menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menuIcon.classList.toggle('hidden', open);
+    menuIconClose.classList.toggle('hidden', !open);
   });
   mobileMenu
     ?.querySelectorAll('a')
     .forEach((link) =>
-      link.addEventListener('click', () =>
-        mobileMenu.classList.add('hidden')
-      )
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open menu');
+        menuIcon.classList.remove('hidden');
+        menuIconClose.classList.add('hidden');
+      })
     );
 </script>
